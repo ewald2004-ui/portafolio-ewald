@@ -58,9 +58,12 @@ Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
 - **Estadísticas, colores y experiencia**: se leen de la página pública del perfil.
   Si Behance cambia el HTML y esa lectura falla, el script conserva las estadísticas
   anteriores y no rompe la sincronización.
-- **Categorías**: se deducen del título (`Video`, `Stand`, `Inmobiliario`, `Campaña`
+- **Categorías**: se deducen del título (`Campañas`, `Videos`, `Inmobiliario`, `Stand`
   o `Proyecto`). Los filtros y contadores se generan solos en el navegador.
-- **Orden**: el proyecto más reciente aparece primero y ocupa la tarjeta destacada.
+- **Orden**: primero `Campañas`, luego `Videos`, `Inmobiliario` y `Stand`; dentro de
+  cada grupo, el proyecto más reciente va primero. El primer proyecto ocupa la
+  tarjeta destacada y la imagen grande de portada. El orden se define en
+  `CATEGORY_ORDER` (`scripts/sync_behance.py`) y en `index.html`.
 - **Límite**: el feed entrega los últimos proyectos publicados. Si algún día tienes
   más de los que aparecen, se pueden agregar a mano en `data/behance.json`.
 

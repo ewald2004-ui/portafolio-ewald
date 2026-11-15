@@ -107,14 +107,29 @@ def short_title(name: str) -> str:
 def category_for(name: str) -> str:
     n = name.lower()
     if "video" in n:
-        return "Video"
+        return "Videos"
     if "stand" in n:
         return "Stand"
     if "inmobiliari" in n:
         return "Inmobiliario"
     if "campa" in n or "campaign" in n:
-        return "Campaña"
+        return "Campañas"
     return "Proyecto"
+
+
+# Orden en que aparecen las categorías en el sitio (y en los filtros).
+CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"]
+
+
+def sort_key(project: dict) -> tuple[int, int]:
+    """Primero por categoría (según CATEGORY_ORDER), luego por fecha descendente."""
+    category = project.get("category", "Proyecto")
+    rank = (
+        CATEGORY_ORDER.index(category)
+        if category in CATEGORY_ORDER
+        else len(CATEGORY_ORDER)
+    )
+    return (rank, -int(project.get("publishedOn") or 0))
 
 
 def color_hex(color: dict | None) -> str:
@@ -186,7 +201,7 @@ def fetch_feed_projects() -> list[dict]:
             }
         )
 
-    projects.sort(key=lambda p: p["publishedOn"], reverse=True)
+    projects.sort(key=sort_key)
     return projects
 
 

@@ -763,7 +763,14 @@
   }
 
   /* Filtros */
-  const categories = ["Todos", ...new Set(projects.map((p) => p.category))];
+  const CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"];
+  const present = [...new Set(projects.map((p) => p.category))];
+  const ordered = present.sort((a, b) => {
+    const ia = CATEGORY_ORDER.indexOf(a);
+    const ib = CATEGORY_ORDER.indexOf(b);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+  });
+  const categories = ["Todos", ...ordered];
   filters.innerHTML = categories.map((cat, i) => {
     const count = cat === "Todos" ? projects.length : projects.filter((p) => p.category === cat).length;
     return `<button class="filter${i === 0 ? " is-active" : ""}" data-filter="${cat}" aria-pressed="${i === 0}">${cat} <sup aria-hidden="true">${count}</sup></button>`;

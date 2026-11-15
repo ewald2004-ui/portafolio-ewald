@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T15:28:38+00:00",
+  "generatedAt": "2026-11-15T16:08:58+00:00",
   "source": "https://www.behance.net/feeds/user?username=ewaldzv",
   "profile": {
     "username": "ewaldzv",
@@ -56,6 +56,83 @@
   },
   "projects": [
     {
+      "id": "257694435",
+      "title": "Campaña Teaser Mobiway POP Madeco",
+      "full": "Campaña Teaser Mobiway POP Madeco",
+      "url": "https://www.behance.net/gallery/257694435/Campana-Teaser-Mobiway-POP-Madeco",
+      "publishedOn": 1793132090,
+      "year": 2026,
+      "category": "Campañas",
+      "img": "assets/projects/257694435.webp",
+      "color": "#010101"
+    },
+    {
+      "id": "257694229",
+      "title": "Campaña Colmena está contigo",
+      "full": "Campaña Colmena está contigo",
+      "url": "https://www.behance.net/gallery/257694229/Campana-Colmena-esta-contigo",
+      "publishedOn": 1793131652,
+      "year": 2026,
+      "category": "Campañas",
+      "img": "assets/projects/257694229.webp",
+      "color": "#0183ff"
+    },
+    {
+      "id": "257693355",
+      "title": "Campaña Verano MITTA Rent a Car",
+      "full": "Campaña Verano MITTA Rent a Car",
+      "url": "https://www.behance.net/gallery/257693355/Campana-Verano-MITTA-Rent-a-Car",
+      "publishedOn": 1793130273,
+      "year": 2026,
+      "category": "Campañas",
+      "img": "assets/projects/257693355.webp",
+      "color": "#032e4b"
+    },
+    {
+      "id": "257692161",
+      "title": "Campaña Aniversario Clínica Santa María",
+      "full": "Campaña Aniversario Clínica Santa María",
+      "url": "https://www.behance.net/gallery/257692161/Campana-Aniversario-Clinica-Santa-Maria",
+      "publishedOn": 1793128646,
+      "year": 2026,
+      "category": "Campañas",
+      "img": "assets/projects/257692161.webp",
+      "color": "#070707"
+    },
+    {
+      "id": "257691301",
+      "title": "Campaña Aerochamber Laboratorios ABBOTT",
+      "full": "Campaña Aerochamber Laboratorios ABBOTT",
+      "url": "https://www.behance.net/gallery/257691301/Campana-Aerochamber-Laboratorios-ABBOTT",
+      "publishedOn": 1793127447,
+      "year": 2026,
+      "category": "Campañas",
+      "img": "assets/projects/257691301.webp",
+      "color": "#9a5518"
+    },
+    {
+      "id": "257690581",
+      "title": "Video Inmobiliaria",
+      "full": "Video Inmobiliaria",
+      "url": "https://www.behance.net/gallery/257690581/Video-Inmobiliaria",
+      "publishedOn": 1793126583,
+      "year": 2026,
+      "category": "Videos",
+      "img": "assets/projects/257690581.webp",
+      "color": "#a0581a"
+    },
+    {
+      "id": "257690171",
+      "title": "Video Presentación BioGaia FAR",
+      "full": "Video Presentación BioGaia FAR",
+      "url": "https://www.behance.net/gallery/257690171/Video-Presentacion-BioGaia-FAR",
+      "publishedOn": 1793126039,
+      "year": 2026,
+      "category": "Videos",
+      "img": "assets/projects/257690171.webp",
+      "color": "#372e2d"
+    },
+    {
       "id": "257740625",
       "title": "Exxacon Isidora & Benjamín",
       "full": "Proyecto Inmobiliario Exxacon Isidora & Benjamín",
@@ -100,28 +177,6 @@
       "color": "#aeaeae"
     },
     {
-      "id": "257694435",
-      "title": "Campaña Teaser Mobiway POP Madeco",
-      "full": "Campaña Teaser Mobiway POP Madeco",
-      "url": "https://www.behance.net/gallery/257694435/Campana-Teaser-Mobiway-POP-Madeco",
-      "publishedOn": 1793132090,
-      "year": 2026,
-      "category": "Campaña",
-      "img": "assets/projects/257694435.webp",
-      "color": "#010101"
-    },
-    {
-      "id": "257694229",
-      "title": "Campaña Colmena está contigo",
-      "full": "Campaña Colmena está contigo",
-      "url": "https://www.behance.net/gallery/257694229/Campana-Colmena-esta-contigo",
-      "publishedOn": 1793131652,
-      "year": 2026,
-      "category": "Campaña",
-      "img": "assets/projects/257694229.webp",
-      "color": "#0183ff"
-    },
-    {
       "id": "257693605",
       "title": "Diseño Stand MITTA",
       "full": "Diseño Stand MITTA",
@@ -131,61 +186,6 @@
       "category": "Stand",
       "img": "assets/projects/257693605.webp",
       "color": "#0b0a0b"
-    },
-    {
-      "id": "257693355",
-      "title": "Campaña Verano MITTA Rent a Car",
-      "full": "Campaña Verano MITTA Rent a Car",
-      "url": "https://www.behance.net/gallery/257693355/Campana-Verano-MITTA-Rent-a-Car",
-      "publishedOn": 1793130273,
-      "year": 2026,
-      "category": "Campaña",
-      "img": "assets/projects/257693355.webp",
-      "color": "#032e4b"
-    },
-    {
-      "id": "257692161",
-      "title": "Campaña Aniversario Clínica Santa María",
-      "full": "Campaña Aniversario Clínica Santa María",
-      "url": "https://www.behance.net/gallery/257692161/Campana-Aniversario-Clinica-Santa-Maria",
-      "publishedOn": 1793128646,
-      "year": 2026,
-      "category": "Campaña",
-      "img": "assets/projects/257692161.webp",
-      "color": "#070707"
-    },
-    {
-      "id": "257691301",
-      "title": "Campaña Aerochamber Laboratorios ABBOTT",
-      "full": "Campaña Aerochamber Laboratorios ABBOTT",
-      "url": "https://www.behance.net/gallery/257691301/Campana-Aerochamber-Laboratorios-ABBOTT",
-      "publishedOn": 1793127447,
-      "year": 2026,
-      "category": "Campaña",
-      "img": "assets/projects/257691301.webp",
-      "color": "#9a5518"
-    },
-    {
-      "id": "257690581",
-      "title": "Video Inmobiliaria",
-      "full": "Video Inmobiliaria",
-      "url": "https://www.behance.net/gallery/257690581/Video-Inmobiliaria",
-      "publishedOn": 1793126583,
-      "year": 2026,
-      "category": "Video",
-      "img": "assets/projects/257690581.webp",
-      "color": "#a0581a"
-    },
-    {
-      "id": "257690171",
-      "title": "Video Presentación BioGaia FAR",
-      "full": "Video Presentación BioGaia FAR",
-      "url": "https://www.behance.net/gallery/257690171/Video-Presentacion-BioGaia-FAR",
-      "publishedOn": 1793126039,
-      "year": 2026,
-      "category": "Video",
-      "img": "assets/projects/257690171.webp",
-      "color": "#372e2d"
     }
   ]
 }
