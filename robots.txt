@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ewald2004-ui.github.io/portafolio-ewald/sitemap.xml
