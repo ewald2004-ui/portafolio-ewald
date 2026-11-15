@@ -121,8 +121,8 @@ def category_for(name: str) -> str:
 CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"]
 
 # Proyecto que siempre aparece primero en la grilla, sin importar la fecha.
-# Corresponde a "Campaña Aniversario Clínica Santa María".
-FEATURED_ID = "257692161"
+# Corresponde a "Campaña Aerochamber Laboratorios ABBOTT".
+FEATURED_ID = "257691301"
 
 
 def sort_key(project: dict) -> tuple[int, int, int]:

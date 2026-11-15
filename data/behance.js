@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-15T16:26:42+00:00",
+  "generatedAt": "2026-11-15T16:31:49+00:00",
   "source": "https://www.behance.net/feeds/user?username=ewaldzv",
   "profile": {
     "username": "ewaldzv",
@@ -57,15 +57,15 @@ window.BEHANCE_DATA = {
   },
   "projects": [
     {
-      "id": "257692161",
-      "title": "Campaña Aniversario Clínica Santa María",
-      "full": "Campaña Aniversario Clínica Santa María",
-      "url": "https://www.behance.net/gallery/257692161/Campana-Aniversario-Clinica-Santa-Maria",
-      "publishedOn": 1793128646,
+      "id": "257691301",
+      "title": "Campaña Aerochamber Laboratorios ABBOTT",
+      "full": "Campaña Aerochamber Laboratorios ABBOTT",
+      "url": "https://www.behance.net/gallery/257691301/Campana-Aerochamber-Laboratorios-ABBOTT",
+      "publishedOn": 1793127447,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257692161.webp",
-      "color": "#070707"
+      "img": "assets/projects/257691301.webp",
+      "color": "#9a5518"
     },
     {
       "id": "257694435",
@@ -101,15 +101,15 @@ window.BEHANCE_DATA = {
       "color": "#032e4b"
     },
     {
-      "id": "257691301",
-      "title": "Campaña Aerochamber Laboratorios ABBOTT",
-      "full": "Campaña Aerochamber Laboratorios ABBOTT",
-      "url": "https://www.behance.net/gallery/257691301/Campana-Aerochamber-Laboratorios-ABBOTT",
-      "publishedOn": 1793127447,
+      "id": "257692161",
+      "title": "Campaña Aniversario Clínica Santa María",
+      "full": "Campaña Aniversario Clínica Santa María",
+      "url": "https://www.behance.net/gallery/257692161/Campana-Aniversario-Clinica-Santa-Maria",
+      "publishedOn": 1793128646,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257691301.webp",
-      "color": "#9a5518"
+      "img": "assets/projects/257692161.webp",
+      "color": "#070707"
     },
     {
       "id": "257690581",

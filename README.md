@@ -66,7 +66,7 @@ Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
   `CATEGORY_ORDER` (`scripts/sync_behance.py`) y en `index.html`.
 - **Proyecto destacado**: `FEATURED_ID` (`scripts/sync_behance.py`) fija un proyecto
   como el primero de la grilla, sin importar categoría ni fecha; ocupa la tarjeta
-  ancha. Hoy es "Campaña Aniversario Clínica Santa María" (`257692161`). Para
+  ancha. Hoy es "Campaña Aerochamber Laboratorios ABBOTT" (`257691301`). Para
   cambiarlo, reemplaza ese ID por el del proyecto que quieras destacar.
 - **Imagen del hero**: es fija (`assets/img/hero.jpg`) y no cambia con la
   sincronización. Para reemplazarla, guarda la nueva imagen con ese mismo nombre
