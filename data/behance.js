@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-15T16:08:58+00:00",
+  "generatedAt": "2026-11-15T16:26:42+00:00",
   "source": "https://www.behance.net/feeds/user?username=ewaldzv",
   "profile": {
     "username": "ewaldzv",
@@ -57,6 +57,17 @@ window.BEHANCE_DATA = {
   },
   "projects": [
     {
+      "id": "257692161",
+      "title": "Campaña Aniversario Clínica Santa María",
+      "full": "Campaña Aniversario Clínica Santa María",
+      "url": "https://www.behance.net/gallery/257692161/Campana-Aniversario-Clinica-Santa-Maria",
+      "publishedOn": 1793128646,
+      "year": 2026,
+      "category": "Campañas",
+      "img": "assets/projects/257692161.webp",
+      "color": "#070707"
+    },
+    {
       "id": "257694435",
       "title": "Campaña Teaser Mobiway POP Madeco",
       "full": "Campaña Teaser Mobiway POP Madeco",
@@ -88,17 +99,6 @@ window.BEHANCE_DATA = {
       "category": "Campañas",
       "img": "assets/projects/257693355.webp",
       "color": "#032e4b"
-    },
-    {
-      "id": "257692161",
-      "title": "Campaña Aniversario Clínica Santa María",
-      "full": "Campaña Aniversario Clínica Santa María",
-      "url": "https://www.behance.net/gallery/257692161/Campana-Aniversario-Clinica-Santa-Maria",
-      "publishedOn": 1793128646,
-      "year": 2026,
-      "category": "Campañas",
-      "img": "assets/projects/257692161.webp",
-      "color": "#070707"
     },
     {
       "id": "257691301",

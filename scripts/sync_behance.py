@@ -120,16 +120,21 @@ def category_for(name: str) -> str:
 # Orden en que aparecen las categorías en el sitio (y en los filtros).
 CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"]
 
+# Proyecto que siempre aparece primero en la grilla, sin importar la fecha.
+# Corresponde a "Campaña Aniversario Clínica Santa María".
+FEATURED_ID = "257692161"
 
-def sort_key(project: dict) -> tuple[int, int]:
-    """Primero por categoría (según CATEGORY_ORDER), luego por fecha descendente."""
+
+def sort_key(project: dict) -> tuple[int, int, int]:
+    """Primero el proyecto destacado, luego por categoría y por fecha descendente."""
+    is_featured = 0 if str(project.get("id")) == FEATURED_ID else 1
     category = project.get("category", "Proyecto")
     rank = (
         CATEGORY_ORDER.index(category)
         if category in CATEGORY_ORDER
         else len(CATEGORY_ORDER)
     )
-    return (rank, -int(project.get("publishedOn") or 0))
+    return (is_featured, rank, -int(project.get("publishedOn") or 0))
 
 
 def color_hex(color: dict | None) -> str:

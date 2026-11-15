@@ -62,9 +62,12 @@ Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
 - **Categorías**: se deducen del título (`Campañas`, `Videos`, `Inmobiliario`, `Stand`
   o `Proyecto`). Los filtros y contadores se generan solos en el navegador.
 - **Orden**: primero `Campañas`, luego `Videos`, `Inmobiliario` y `Stand`; dentro de
-  cada grupo, el proyecto más reciente va primero. El primer proyecto ocupa la
-  tarjeta destacada de la grilla. El orden se define en
+  cada grupo, el proyecto más reciente va primero. El orden se define en
   `CATEGORY_ORDER` (`scripts/sync_behance.py`) y en `index.html`.
+- **Proyecto destacado**: `FEATURED_ID` (`scripts/sync_behance.py`) fija un proyecto
+  como el primero de la grilla, sin importar categoría ni fecha; ocupa la tarjeta
+  ancha. Hoy es "Campaña Aniversario Clínica Santa María" (`257692161`). Para
+  cambiarlo, reemplaza ese ID por el del proyecto que quieras destacar.
 - **Imagen del hero**: es fija (`assets/img/hero.jpg`) y no cambia con la
   sincronización. Para reemplazarla, guarda la nueva imagen con ese mismo nombre
   (idealmente 1280 px de ancho, formato 16:9 y menos de 300 KB).
