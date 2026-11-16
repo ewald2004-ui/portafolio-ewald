@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-15T16:31:49+00:00",
-  "source": "https://www.behance.net/feeds/user?username=ewaldzv",
+  "generatedAt": "2026-11-16T12:15:30+00:00",
+  "source": "https://www.behance.net/v3/graphql",
   "profile": {
     "username": "ewaldzv",
     "name": "Ewald Zamorano Valero",
@@ -9,7 +9,7 @@
     "email": "ewald2004@gmail.com",
     "url": "https://www.behance.net/ewaldzv",
     "stats": {
-      "views": 1511,
+      "views": 1512,
       "appreciations": 51,
       "followers": 19
     },
@@ -63,8 +63,8 @@
       "publishedOn": 1793127447,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257691301.webp",
-      "color": "#9a5518"
+      "color": "#9a5518",
+      "img": "assets/projects/257691301.webp"
     },
     {
       "id": "257694435",
@@ -74,8 +74,8 @@
       "publishedOn": 1793132090,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257694435.webp",
-      "color": "#010101"
+      "color": "#010101",
+      "img": "assets/projects/257694435.webp"
     },
     {
       "id": "257694229",
@@ -85,8 +85,8 @@
       "publishedOn": 1793131652,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257694229.webp",
-      "color": "#0183ff"
+      "color": "#0183ff",
+      "img": "assets/projects/257694229.webp"
     },
     {
       "id": "257693355",
@@ -96,8 +96,8 @@
       "publishedOn": 1793130273,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257693355.webp",
-      "color": "#032e4b"
+      "color": "#032e4b",
+      "img": "assets/projects/257693355.webp"
     },
     {
       "id": "257692161",
@@ -107,8 +107,283 @@
       "publishedOn": 1793128646,
       "year": 2026,
       "category": "Campañas",
-      "img": "assets/projects/257692161.webp",
-      "color": "#070707"
+      "color": "#070707",
+      "img": "assets/projects/257692161.webp"
+    },
+    {
+      "id": "257691661",
+      "title": "Campaña Endometriosis 2 Laboratorios ABBOTT",
+      "full": "Campaña Endometriosis 2 Laboratorios ABBOTT",
+      "url": "https://www.behance.net/gallery/257691661/Campana-Endometriosis-2-Laboratorios-ABBOTT",
+      "publishedOn": 1793127863,
+      "year": 2026,
+      "category": "Campañas",
+      "color": "#1d0c0a",
+      "img": "assets/projects/257691661.webp"
+    },
+    {
+      "id": "257691027",
+      "title": "Campaña RRSS Biogaia Far Laboratorios ABBOTT",
+      "full": "Campaña RRSS Biogaia Far Laboratorios ABBOTT",
+      "url": "https://www.behance.net/gallery/257691027/Campana-RRSS-Biogaia-Far-Laboratorios-ABBOTT",
+      "publishedOn": 1793127095,
+      "year": 2026,
+      "category": "Campañas",
+      "color": "#3a3439",
+      "img": "assets/projects/257691027.webp"
+    },
+    {
+      "id": "257689665",
+      "title": "Campaña Edometriosis Laboratorios ABBOTT",
+      "full": "Campaña Edometriosis Laboratorios ABBOTT",
+      "url": "https://www.behance.net/gallery/257689665/Campana-Edometriosis-Laboratorios-ABBOTT",
+      "publishedOn": 1793125322,
+      "year": 2026,
+      "category": "Campañas",
+      "color": "#090907",
+      "img": "assets/projects/257689665.webp"
+    },
+    {
+      "id": "117717263",
+      "title": "CAMPAÑA CHILIS COSTANERA CENTER",
+      "full": "CAMPAÑA CHILIS COSTANERA CENTER",
+      "url": "https://www.behance.net/gallery/117717263/CAMPANA-CHILIS-COSTANERA-CENTER",
+      "publishedOn": 1618679016,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#170f07",
+      "img": "assets/projects/117717263.webp"
+    },
+    {
+      "id": "117716379",
+      "title": "CAMPAÑA LICITACIÓN AGUAS ANDINAS",
+      "full": "CAMPAÑA LICITACIÓN AGUAS ANDINAS",
+      "url": "https://www.behance.net/gallery/117716379/CAMPANA-LICITACION-AGUAS-ANDINAS",
+      "publishedOn": 1618677941,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#f8fafd",
+      "img": "assets/projects/117716379.webp"
+    },
+    {
+      "id": "117714431",
+      "title": "CAMPAÑA BLACK FRIDAY CHILIS RESTAURAN",
+      "full": "CAMPAÑA BLACK FRIDAY CHILIS RESTAURAN",
+      "url": "https://www.behance.net/gallery/117714431/CAMPANA-BLACK-FRIDAY-CHILIS-RESTAURAN",
+      "publishedOn": 1618675600,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#c23c11",
+      "img": "assets/projects/117714431.webp"
+    },
+    {
+      "id": "117713849",
+      "title": "CAMPAÑA CIBER DAY BCI SEGUROS 2020",
+      "full": "CAMPAÑA CIBER DAY BCI SEGUROS 2020",
+      "url": "https://www.behance.net/gallery/117713849/CAMPANA-CIBER-DAY-BCI-SEGUROS-2020",
+      "publishedOn": 1618674872,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#040c8b",
+      "img": "assets/projects/117713849.webp"
+    },
+    {
+      "id": "117713333",
+      "title": "CAMPAÑA ACCIDENTES PERSONALES BCI SEGUROS 2021",
+      "full": "CAMPAÑA ACCIDENTES PERSONALES BCI SEGUROS 2021",
+      "url": "https://www.behance.net/gallery/117713333/CAMPANA-ACCIDENTES-PERSONALES-BCI-SEGUROS-2021",
+      "publishedOn": 1618674251,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#fdfefe",
+      "img": "assets/projects/117713333.webp"
+    },
+    {
+      "id": "117713229",
+      "title": "CAMPAÑA SEGURO AUTO BCI SEGUROS 2021",
+      "full": "CAMPAÑA SEGURO AUTO BCI SEGUROS 2021",
+      "url": "https://www.behance.net/gallery/117713229/CAMPANA-SEGURO-AUTO-BCI-SEGUROS-2021",
+      "publishedOn": 1618674135,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#b7c1ca",
+      "img": "assets/projects/117713229.webp"
+    },
+    {
+      "id": "117713015",
+      "title": "CAMPAÑA DIAS SEGUROS BCI SEGUROS 2021",
+      "full": "CAMPAÑA DIAS SEGUROS BCI SEGUROS 2021",
+      "url": "https://www.behance.net/gallery/117713015/CAMPANA-DIAS-SEGUROS-BCI-SEGUROS-2021",
+      "publishedOn": 1618673899,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#fdfefe",
+      "img": "assets/projects/117713015.webp"
+    },
+    {
+      "id": "117225975",
+      "title": "CAMPAÑA HALLOWEEN BCI SEGUROS 2020",
+      "full": "CAMPAÑA HALLOWEEN BCI SEGUROS 2020",
+      "url": "https://www.behance.net/gallery/117225975/CAMPANA-HALLOWEEN-BCI-SEGUROS-2020",
+      "publishedOn": 1618064130,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#4a02af",
+      "img": "assets/projects/117225975.webp"
+    },
+    {
+      "id": "117225939",
+      "title": "CAMPAÑA CLINICA NCA 2020",
+      "full": "CAMPAÑA CLINICA NCA 2020",
+      "url": "https://www.behance.net/gallery/117225939/CAMPANA-CLINICA-NCA-2020",
+      "publishedOn": 1618064012,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#ffa29e",
+      "img": "assets/projects/117225939.webp"
+    },
+    {
+      "id": "117225851",
+      "title": "CAMPAÑA CLINICA NCA 2021",
+      "full": "CAMPAÑA CLINICA NCA 2021",
+      "url": "https://www.behance.net/gallery/117225851/CAMPANA-CLINICA-NCA-2021",
+      "publishedOn": 1618063917,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#fefefe",
+      "img": "assets/projects/117225851.webp"
+    },
+    {
+      "id": "117225783",
+      "title": "CAMPAÑA SEGUROS AUTOMOTRIZ BCI SEGUROS 2020",
+      "full": "CAMPAÑA SEGUROS AUTOMOTRIZ BCI SEGUROS 2020",
+      "url": "https://www.behance.net/gallery/117225783/CAMPANA-SEGUROS-AUTOMOTRIZ-BCI-SEGUROS-2020",
+      "publishedOn": 1618063830,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#3e3329",
+      "img": "assets/projects/117225783.webp"
+    },
+    {
+      "id": "117225655",
+      "title": "CAMPAÑA CLINICA NCA 2021",
+      "full": "CAMPAÑA CLINICA NCA 2021",
+      "url": "https://www.behance.net/gallery/117225655/CAMPANA-CLINICA-NCA-2021",
+      "publishedOn": 1618063693,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#ffb290",
+      "img": "assets/projects/117225655.webp"
+    },
+    {
+      "id": "117225541",
+      "title": "CAMPAÑA CLINICA NCA 2020",
+      "full": "CAMPAÑA CLINICA NCA 2020",
+      "url": "https://www.behance.net/gallery/117225541/CAMPANA-CLINICA-NCA-2020",
+      "publishedOn": 1618063559,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#070707",
+      "img": "assets/projects/117225541.webp"
+    },
+    {
+      "id": "117225377",
+      "title": "CAMPAÑA LINK BCI SEGUROS",
+      "full": "CAMPAÑA LINK BCI SEGUROS",
+      "url": "https://www.behance.net/gallery/117225377/CAMPANA-LINK-BCI-SEGUROS",
+      "publishedOn": 1618063348,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#010801",
+      "img": "assets/projects/117225377.webp"
+    },
+    {
+      "id": "116454171",
+      "title": "Campaña Villa Felicce Buzios 2021",
+      "full": "Campaña Villa Felicce Buzios 2021",
+      "url": "https://www.behance.net/gallery/116454171/Campana-Villa-Felicce-Buzios-2021",
+      "publishedOn": 1617060431,
+      "year": 2021,
+      "category": "Campañas",
+      "color": "#631d0c",
+      "img": "assets/projects/116454171.webp"
+    },
+    {
+      "id": "75725069",
+      "title": "Campaña Asistencia en Viaje Colmena",
+      "full": "Campaña Asistencia en Viaje Colmena",
+      "url": "https://www.behance.net/gallery/75725069/Campana-Asistencia-en-Viaje-Colmena",
+      "publishedOn": 1549034703,
+      "year": 2019,
+      "category": "Campañas",
+      "color": "#54c1ff",
+      "img": "assets/projects/75725069.webp"
+    },
+    {
+      "id": "75724777",
+      "title": "Campaña Auto Volador Terrafugia",
+      "full": "Campaña Auto Volador Terrafugia",
+      "url": "https://www.behance.net/gallery/75724777/Campana-Auto-Volador-Terrafugia",
+      "publishedOn": 1549034203,
+      "year": 2019,
+      "category": "Campañas",
+      "color": "#cdd1d3",
+      "img": "assets/projects/75724777.webp"
+    },
+    {
+      "id": "75724679",
+      "title": "Campaña Bomberos de Chile. Azte Socio",
+      "full": "Campaña Bomberos de Chile. Azte Socio",
+      "url": "https://www.behance.net/gallery/75724679/Campana-Bomberos-de-Chile-Azte-Socio",
+      "publishedOn": 1549034060,
+      "year": 2019,
+      "category": "Campañas",
+      "color": "#d7534d",
+      "img": "assets/projects/75724679.webp"
+    },
+    {
+      "id": "58045465",
+      "title": "Atton Hoteles. Campaña Expansión. \"Selfie\"",
+      "full": "Atton Hoteles. Campaña Expansión. \"Selfie\"",
+      "url": "https://www.behance.net/gallery/58045465/Atton-Hoteles-Campana-Expansion-Selfie",
+      "publishedOn": 1508767467,
+      "year": 2017,
+      "category": "Campañas",
+      "color": "#aaa4a4",
+      "img": "assets/projects/58045465.webp"
+    },
+    {
+      "id": "57729889",
+      "title": "Directv Campaña Malos. Navidad",
+      "full": "Directv Campaña Malos. Navidad",
+      "url": "https://www.behance.net/gallery/57729889/Directv-Campana-Malos-Navidad",
+      "publishedOn": 1507919813,
+      "year": 2017,
+      "category": "Campañas",
+      "color": "#9f9a9c",
+      "img": "assets/projects/57729889.webp"
+    },
+    {
+      "id": "57491763",
+      "title": "Campaña Antipiratería DTV Alianza",
+      "full": "Campaña Antipiratería DTV Alianza",
+      "url": "https://www.behance.net/gallery/57491763/Campana-Antipirateria-DTV-Alianza",
+      "publishedOn": 1507305186,
+      "year": 2017,
+      "category": "Campañas",
+      "color": "#f0eae4",
+      "img": "assets/projects/57491763.webp"
+    },
+    {
+      "id": "257692997",
+      "title": "Video Promo Dirección de Arte Generativa",
+      "full": "Video Promo Dirección de Arte Generativa",
+      "url": "https://www.behance.net/gallery/257692997/Video-Promo-Direccion-de-Arte-Generativa",
+      "publishedOn": 1793129755,
+      "year": 2026,
+      "category": "Videos",
+      "color": "#0c0d11",
+      "img": "assets/projects/257692997.webp"
     },
     {
       "id": "257690581",
@@ -118,8 +393,8 @@
       "publishedOn": 1793126583,
       "year": 2026,
       "category": "Videos",
-      "img": "assets/projects/257690581.webp",
-      "color": "#a0581a"
+      "color": "#a0581a",
+      "img": "assets/projects/257690581.webp"
     },
     {
       "id": "257690171",
@@ -129,8 +404,8 @@
       "publishedOn": 1793126039,
       "year": 2026,
       "category": "Videos",
-      "img": "assets/projects/257690171.webp",
-      "color": "#372e2d"
+      "color": "#372e2d",
+      "img": "assets/projects/257690171.webp"
     },
     {
       "id": "257740625",
@@ -140,8 +415,8 @@
       "publishedOn": 1793209126,
       "year": 2026,
       "category": "Inmobiliario",
-      "img": "assets/projects/257740625.webp",
-      "color": "#aea593"
+      "color": "#aea593",
+      "img": "assets/projects/257740625.webp"
     },
     {
       "id": "257740219",
@@ -151,8 +426,8 @@
       "publishedOn": 1793208528,
       "year": 2026,
       "category": "Inmobiliario",
-      "img": "assets/projects/257740219.webp",
-      "color": "#d3d0cc"
+      "color": "#d3d0cc",
+      "img": "assets/projects/257740219.webp"
     },
     {
       "id": "257740095",
@@ -162,8 +437,19 @@
       "publishedOn": 1793208391,
       "year": 2026,
       "category": "Inmobiliario",
-      "img": "assets/projects/257740095.webp",
-      "color": "#b9bab1"
+      "color": "#b9bab1",
+      "img": "assets/projects/257740095.webp"
+    },
+    {
+      "id": "257739905",
+      "title": "Etiquetas Vino Inmobiliaria Exxacon",
+      "full": "Etiquetas Vino Inmobiliaria Exxacon",
+      "url": "https://www.behance.net/gallery/257739905/Etiquetas-Vino-Inmobiliaria-Exxacon",
+      "publishedOn": 1793208147,
+      "year": 2026,
+      "category": "Inmobiliario",
+      "color": "#1b1b1b",
+      "img": "assets/projects/257739905.webp"
     },
     {
       "id": "257739727",
@@ -173,8 +459,8 @@
       "publishedOn": 1793207787,
       "year": 2026,
       "category": "Inmobiliario",
-      "img": "assets/projects/257739727.webp",
-      "color": "#aeaeae"
+      "color": "#aeaeae",
+      "img": "assets/projects/257739727.webp"
     },
     {
       "id": "257693605",
@@ -184,8 +470,393 @@
       "publishedOn": 1793130678,
       "year": 2026,
       "category": "Stand",
-      "img": "assets/projects/257693605.webp",
-      "color": "#0b0a0b"
+      "color": "#0b0a0b",
+      "img": "assets/projects/257693605.webp"
+    },
+    {
+      "id": "258530757",
+      "title": "Logotipo MITTAGO RENTING",
+      "full": "Logotipo MITTAGO RENTING",
+      "url": "https://www.behance.net/gallery/258530757/Logotipo-MITTAGO-RENTING",
+      "publishedOn": 1794760770,
+      "year": 2026,
+      "category": "Proyecto",
+      "color": "#eff0ea",
+      "img": "assets/projects/258530757.webp"
+    },
+    {
+      "id": "257692415",
+      "title": "Diseño Madeco Box",
+      "full": "Diseño Madeco Box",
+      "url": "https://www.behance.net/gallery/257692415/Diseno-Madeco-Box",
+      "publishedOn": 1793128855,
+      "year": 2026,
+      "category": "Proyecto",
+      "color": "#e9e9e9",
+      "img": "assets/projects/257692415.webp"
+    },
+    {
+      "id": "117229075",
+      "title": "POSTEO PROMOCIÓN GIMNACIO EN PROVIDENCIA",
+      "full": "POSTEO PROMOCIÓN GIMNACIO EN PROVIDENCIA",
+      "url": "https://www.behance.net/gallery/117229075/POSTEO-PROMOCION-GIMNACIO-EN-PROVIDENCIA",
+      "publishedOn": 1618067293,
+      "year": 2021,
+      "category": "Proyecto",
+      "color": "#110503",
+      "img": "assets/projects/117229075.webp"
+    },
+    {
+      "id": "117226153",
+      "title": "POSTEO INSTAGRAM CAFETERIA 2020",
+      "full": "POSTEO INSTAGRAM CAFETERIA 2020",
+      "url": "https://www.behance.net/gallery/117226153/POSTEO-INSTAGRAM-CAFETERIA-2020",
+      "publishedOn": 1618064311,
+      "year": 2021,
+      "category": "Proyecto",
+      "color": "#e9e4e0",
+      "img": "assets/projects/117226153.webp"
+    },
+    {
+      "id": "75725371",
+      "title": "Aviso Asistencia en Viajes Internacionales Colmena",
+      "full": "Aviso Asistencia en Viajes Internacionales Colmena",
+      "url": "https://www.behance.net/gallery/75725371/Aviso-Asistencia-en-Viajes-Internacionales-Colmena",
+      "publishedOn": 1549035087,
+      "year": 2019,
+      "category": "Proyecto",
+      "color": "#f2f4f4",
+      "img": "assets/projects/75725371.webp"
+    },
+    {
+      "id": "64362051",
+      "title": "WEB SITE HUEVOS CINTAZUL",
+      "full": "WEB SITE HUEVOS CINTAZUL",
+      "url": "https://www.behance.net/gallery/64362051/WEB-SITE-HUEVOS-CINTAZUL",
+      "publishedOn": 1523549668,
+      "year": 2018,
+      "category": "Proyecto",
+      "color": "#faf9fa",
+      "img": "assets/projects/64362051.webp"
+    },
+    {
+      "id": "58454181",
+      "title": "PACKAGING VIÑA MAQUIS",
+      "full": "PACKAGING VIÑA MAQUIS",
+      "url": "https://www.behance.net/gallery/58454181/PACKAGING-VINA-MAQUIS",
+      "publishedOn": 1509730219,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#d7d7d7",
+      "img": "assets/projects/58454181.webp"
+    },
+    {
+      "id": "58453921",
+      "title": "Post Halloween Chilis",
+      "full": "Post Halloween Chilis",
+      "url": "https://www.behance.net/gallery/58453921/Post-Halloween-Chilis",
+      "publishedOn": 1509729700,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#0c0c0d",
+      "img": "assets/projects/58453921.webp"
+    },
+    {
+      "id": "58453359",
+      "title": "Folex Tratamiento contra los Hongos",
+      "full": "Folex Tratamiento contra los Hongos",
+      "url": "https://www.behance.net/gallery/58453359/Folex-Tratamiento-contra-los-Hongos",
+      "publishedOn": 1509728744,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#a09b9d",
+      "img": "assets/projects/58453359.webp"
+    },
+    {
+      "id": "57818439",
+      "title": "Arom Desodorante Ambiental",
+      "full": "Arom Desodorante Ambiental",
+      "url": "https://www.behance.net/gallery/57818439/Arom-Desodorante-Ambiental",
+      "publishedOn": 1508188570,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#aba3a3",
+      "img": "assets/projects/57818439.webp"
+    },
+    {
+      "id": "57800611",
+      "title": "BBVA Hipotecario 120%",
+      "full": "BBVA Hipotecario 120%",
+      "url": "https://www.behance.net/gallery/57800611/BBVA-Hipotecario-120",
+      "publishedOn": 1508157918,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#fcfcfc",
+      "img": "assets/projects/57800611.webp"
+    },
+    {
+      "id": "57733837",
+      "title": "Glassex Limpiavidrios",
+      "full": "Glassex Limpiavidrios",
+      "url": "https://www.behance.net/gallery/57733837/Glassex-Limpiavidrios",
+      "publishedOn": 1507929178,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#01a8fa",
+      "img": "assets/projects/57733837.webp"
+    },
+    {
+      "id": "57730957",
+      "title": "Vichy. Sunblock",
+      "full": "Vichy. Sunblock",
+      "url": "https://www.behance.net/gallery/57730957/Vichy-Sunblock",
+      "publishedOn": 1507922159,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#a3a0a4",
+      "img": "assets/projects/57730957.webp"
+    },
+    {
+      "id": "57730789",
+      "title": "Telmex",
+      "full": "Telmex",
+      "url": "https://www.behance.net/gallery/57730789/Telmex",
+      "publishedOn": 1507921764,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#9f9a9c",
+      "img": "assets/projects/57730789.webp"
+    },
+    {
+      "id": "57730621",
+      "title": "Uiversidad Diego Portales. Admisión",
+      "full": "Uiversidad Diego Portales. Admisión",
+      "url": "https://www.behance.net/gallery/57730621/Uiversidad-Diego-Portales-Admision",
+      "publishedOn": 1507921473,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#a49f9b",
+      "img": "assets/projects/57730621.webp"
+    },
+    {
+      "id": "57730523",
+      "title": "Serta Colchones",
+      "full": "Serta Colchones",
+      "url": "https://www.behance.net/gallery/57730523/Serta-Colchones",
+      "publishedOn": 1507921143,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#000000",
+      "img": "assets/projects/57730523.webp"
+    },
+    {
+      "id": "57730447",
+      "title": "LG TV HD",
+      "full": "LG TV HD",
+      "url": "https://www.behance.net/gallery/57730447/LG-TV-HD",
+      "publishedOn": 1507920983,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#f7f7f7",
+      "img": "assets/projects/57730447.webp"
+    },
+    {
+      "id": "57730387",
+      "title": "LG Shine Phone Extra Memory",
+      "full": "LG Shine Phone Extra Memory",
+      "url": "https://www.behance.net/gallery/57730387/LG-Shine-Phone-Extra-Memory",
+      "publishedOn": 1507920846,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#004fa6",
+      "img": "assets/projects/57730387.webp"
+    },
+    {
+      "id": "57730233",
+      "title": "Emol. Farox Job Finder",
+      "full": "Emol. Farox Job Finder",
+      "url": "https://www.behance.net/gallery/57730233/Emol-Farox-Job-Finder",
+      "publishedOn": 1507920556,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#a5a09b",
+      "img": "assets/projects/57730233.webp"
+    },
+    {
+      "id": "57730001",
+      "title": "Peugeot Lanzamiento Website 2do Finalista Cannes Lions",
+      "full": "Peugeot Lanzamiento Website 2do Finalista Cannes Lions",
+      "url": "https://www.behance.net/gallery/57730001/Peugeot-Lanzamiento-Website-2do-Finalista-Cannes-Lions",
+      "publishedOn": 1507920099,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#b6a5a1",
+      "img": "assets/projects/57730001.webp"
+    },
+    {
+      "id": "57729827",
+      "title": "BBVA Hipotecario 120%",
+      "full": "BBVA Hipotecario 120%",
+      "url": "https://www.behance.net/gallery/57729827/BBVA-Hipotecario-120",
+      "publishedOn": 1507919605,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#006fa5",
+      "img": "assets/projects/57729827.webp"
+    },
+    {
+      "id": "57729521",
+      "title": "Centro de Capacitación Apple",
+      "full": "Centro de Capacitación Apple",
+      "url": "https://www.behance.net/gallery/57729521/Centro-de-Capacitacion-Apple",
+      "publishedOn": 1507919008,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#9f9a9c",
+      "img": "assets/projects/57729521.webp"
+    },
+    {
+      "id": "57729459",
+      "title": "Centro de Capacitación Apple 1er Finalista en Cannes",
+      "full": "Centro de Capacitación Apple 1er Finalista en Cannes",
+      "url": "https://www.behance.net/gallery/57729459/Centro-de-Capacitacion-Apple-1er-Finalista-en-Cannes",
+      "publishedOn": 1507918880,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#a09b9d",
+      "img": "assets/projects/57729459.webp"
+    },
+    {
+      "id": "57499595",
+      "title": "Packaging Atton Hoteles",
+      "full": "Packaging Atton Hoteles",
+      "url": "https://www.behance.net/gallery/57499595/Packaging-Atton-Hoteles",
+      "publishedOn": 1507319948,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#fcfcfc",
+      "img": "assets/projects/57499595.webp"
+    },
+    {
+      "id": "57499481",
+      "title": "Etiqueta Viña Maquis",
+      "full": "Etiqueta Viña Maquis",
+      "url": "https://www.behance.net/gallery/57499481/Etiqueta-Vina-Maquis",
+      "publishedOn": 1507319677,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#d4e5f0",
+      "img": "assets/projects/57499481.webp"
+    },
+    {
+      "id": "57499061",
+      "title": "Market 365 Atton Hoteles",
+      "full": "Market 365 Atton Hoteles",
+      "url": "https://www.behance.net/gallery/57499061/Market-365-Atton-Hoteles",
+      "publishedOn": 1507318861,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#b6b6ae",
+      "img": "assets/projects/57499061.webp"
+    },
+    {
+      "id": "57498783",
+      "title": "Packaging Santa Ema Navidad",
+      "full": "Packaging Santa Ema Navidad",
+      "url": "https://www.behance.net/gallery/57498783/Packaging-Santa-Ema-Navidad",
+      "publishedOn": 1507318283,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#fcfcfc",
+      "img": "assets/projects/57498783.webp"
+    },
+    {
+      "id": "57498191",
+      "title": "Restaurant Guadalupe Atton Hoteles Colombia",
+      "full": "Restaurant Guadalupe Atton Hoteles Colombia",
+      "url": "https://www.behance.net/gallery/57498191/Restaurant-Guadalupe-Atton-Hoteles-Colombia",
+      "publishedOn": 1507317186,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#ecdfcc",
+      "img": "assets/projects/57498191.webp"
+    },
+    {
+      "id": "57497779",
+      "title": "Edificio Vita Exxacon",
+      "full": "Edificio Vita Exxacon",
+      "url": "https://www.behance.net/gallery/57497779/Edificio-Vita-Exxacon",
+      "publishedOn": 1507316401,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#132333",
+      "img": "assets/projects/57497779.webp"
+    },
+    {
+      "id": "57497555",
+      "title": "Mailing Nuevos Clientes LaMesa",
+      "full": "Mailing Nuevos Clientes LaMesa",
+      "url": "https://www.behance.net/gallery/57497555/Mailing-Nuevos-Clientes-LaMesa",
+      "publishedOn": 1507315729,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#ffeccf",
+      "img": "assets/projects/57497555.webp"
+    },
+    {
+      "id": "57497373",
+      "title": "Packaging Directv Prepago",
+      "full": "Packaging Directv Prepago",
+      "url": "https://www.behance.net/gallery/57497373/Packaging-Directv-Prepago",
+      "publishedOn": 1507315282,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#01a3f3",
+      "img": "assets/projects/57497373.webp"
+    },
+    {
+      "id": "57495867",
+      "title": "Chili's Restaurant Jueves en Promoción",
+      "full": "Chili's Restaurant Jueves en Promoción",
+      "url": "https://www.behance.net/gallery/57495867/Chilis-Restaurant-Jueves-en-Promocion",
+      "publishedOn": 1507312379,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#040404",
+      "img": "assets/projects/57495867.webp"
+    },
+    {
+      "id": "57494915",
+      "title": "Atton Hoteles Expasión",
+      "full": "Atton Hoteles Expasión",
+      "url": "https://www.behance.net/gallery/57494915/Atton-Hoteles-Expasion",
+      "publishedOn": 1507310454,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#9f999b",
+      "img": "assets/projects/57494915.webp"
+    },
+    {
+      "id": "57492677",
+      "title": "Exxacon Institucional & Proyectos",
+      "full": "Exxacon Institucional & Proyectos",
+      "url": "https://www.behance.net/gallery/57492677/Exxacon-Institucional-Proyectos",
+      "publishedOn": 1507309390,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#9dcee5",
+      "img": "assets/projects/57492677.webp"
+    },
+    {
+      "id": "57485801",
+      "title": "Atton Hoteles Apertura Bolsa",
+      "full": "Atton Hoteles Apertura Bolsa",
+      "url": "https://www.behance.net/gallery/57485801/Atton-Hoteles-Apertura-Bolsa",
+      "publishedOn": 1507304451,
+      "year": 2017,
+      "category": "Proyecto",
+      "color": "#3a3d43",
+      "img": "assets/projects/57485801.webp"
     }
   ]
 }

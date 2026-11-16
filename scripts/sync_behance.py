@@ -2,8 +2,10 @@
 """
 Sincroniza el portafolio con el perfil público de Behance.
 
-Fuente principal: feed RSS oficial del perfil.
-Fuente secundaria (opcional): página del perfil, para estadísticas, colores y experiencia.
+Fuentes:
+    1. GraphQL público de Behance (todos los proyectos, paginado).
+    2. Feed RSS del perfil (respaldo si GraphQL falla).
+    3. Página del perfil, para estadísticas y experiencia.
 
 Uso:
     python3 scripts/sync_behance.py
@@ -22,6 +24,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+import uuid
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -34,6 +37,7 @@ from xml.etree import ElementTree as ET
 USERNAME = "ewaldzv"
 BEHANCE_URL = f"https://www.behance.net/{USERNAME}"
 FEED_URL = f"https://www.behance.net/feeds/user?username={USERNAME}"
+GRAPHQL_URL = "https://www.behance.net/v3/graphql"
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -210,6 +214,118 @@ def fetch_feed_projects() -> list[dict]:
     return projects
 
 
+def best_cover(node: dict) -> str:
+    """Elige la portada de 808 px en WebP; si no existe, la de mayor ancho."""
+    covers = (node.get("covers") or {}).get("allAvailable") or []
+    for cover in covers:
+        url = str(cover.get("url") or "")
+        if cover.get("width") == 808 and "webp" in url.lower():
+            return url
+    usable = [c for c in covers if c.get("url")]
+    if not usable:
+        return ""
+    return str(max(usable, key=lambda c: int(c.get("width") or 0))["url"])
+
+
+def fetch_graphql_projects() -> list[dict]:
+    """Pide todos los proyectos del perfil por GraphQL, paginando de 12 en 12.
+
+    Behance exige una cookie `bcp` y la misma cabecera `x-bcp`; cualquier UUID
+    sirve, así que se genera uno nuevo en cada sincronización.
+    """
+    query = (
+        "query ProfileProjects($u: String!, $a: String) {"
+        " user(username: $u) {"
+        " profileProjects(first: 12, after: $a) {"
+        " nodes { id name url publishedOn"
+        " covers { allAvailable { url width height } }"
+        " colors { r g b } }"
+        " pageInfo { endCursor hasNextPage } } } }"
+    )
+    token = str(uuid.uuid4())
+    after: str | None = None
+    nodes: list[dict] = []
+    seen: set[str] = set()
+
+    for page in range(1, 51):
+        payload = json.dumps(
+            {"query": query, "variables": {"u": USERNAME, "a": after}}
+        ).encode("utf-8")
+        request = urllib.request.Request(
+            GRAPHQL_URL,
+            data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "User-Agent": USER_AGENT,
+                "x-bcp": token,
+                "x-requested-with": "XMLHttpRequest",
+                "Origin": "https://www.behance.net",
+                "Referer": BEHANCE_URL,
+                "Cookie": f"bcp={token}",
+            },
+        )
+        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+            data = json.loads(response.read().decode("utf-8", errors="replace"))
+
+        if data.get("errors"):
+            raise RuntimeError(
+                "GraphQL devolvió un error: "
+                + json.dumps(data["errors"], ensure_ascii=False)[:300]
+            )
+
+        page_data = (
+            ((data.get("data") or {}).get("user") or {}).get("profileProjects") or {}
+        )
+        page_nodes = page_data.get("nodes") or []
+        for node in page_nodes:
+            pid = str(node.get("id") or "")
+            if not pid or pid in seen:
+                continue
+            seen.add(pid)
+            nodes.append(node)
+
+        info = page_data.get("pageInfo") or {}
+        log(f"página {page}: {len(page_nodes)} proyectos · acumulado {len(nodes)}")
+        if not info.get("hasNextPage"):
+            break
+        after = info.get("endCursor")
+        if not after:
+            break
+
+    if not nodes:
+        raise RuntimeError("GraphQL no devolvió proyectos.")
+
+    projects = []
+    for node in nodes:
+        name = clean_text(node.get("name"))
+        url = clean_text(node.get("url")).split("?")[0]
+        if not name or not url:
+            continue
+        published_on = int(node.get("publishedOn") or 0)
+        published = (
+            datetime.fromtimestamp(published_on, tz=timezone.utc)
+            if published_on
+            else datetime.now(timezone.utc)
+        )
+        projects.append(
+            {
+                "id": str(node.get("id")),
+                "title": short_title(name),
+                "full": name,
+                "url": url,
+                "cover": best_cover(node),
+                "publishedOn": int(published.timestamp()),
+                "year": published.year,
+                "category": category_for(name),
+                "color": color_hex(node.get("colors")),
+            }
+        )
+
+    projects.sort(key=sort_key)
+    return projects
+
+
 def fetch_profile_meta() -> dict:
     """Intenta leer estadísticas, colores y experiencia desde la página del perfil."""
     page = fetch_text(BEHANCE_URL)
@@ -322,9 +438,36 @@ def main() -> int:
     profile["username"] = USERNAME
     profile["url"] = BEHANCE_URL
 
-    print("1/3 · Leyendo proyectos del feed de Behance")
-    projects = fetch_feed_projects()
-    log(f"{len(projects)} proyectos encontrados")
+    print("1/3 · Leyendo proyectos de Behance")
+    source = GRAPHQL_URL
+    try:
+        projects = fetch_graphql_projects()
+        log(f"{len(projects)} proyectos encontrados (GraphQL)")
+    except (
+        urllib.error.URLError,
+        RuntimeError,
+        json.JSONDecodeError,
+        ValueError,
+        TimeoutError,
+    ) as exc:
+        source = FEED_URL
+        log(f"GraphQL no disponible ({exc})")
+        log("usando el feed RSS como respaldo")
+        fresh = fetch_feed_projects()
+        previous_projects = previous.get("projects") or []
+        if previous_projects:
+            # El RSS solo trae los últimos 12: se conserva todo lo anterior y se
+            # actualiza/agrega lo que venga en el feed, para no perder proyectos.
+            merged = {str(p.get("id")): p for p in previous_projects}
+            for item in fresh:
+                base = merged.get(str(item.get("id")), {})
+                merged[str(item.get("id"))] = {**base, **item}
+            projects = list(merged.values())
+            projects.sort(key=sort_key)
+            log(f"{len(projects)} proyectos conservados (feed: {len(fresh)})")
+        else:
+            projects = fresh
+            log(f"{len(projects)} proyectos encontrados (RSS)")
 
     print("\n2/3 · Leyendo estadísticas del perfil")
     try:
@@ -346,16 +489,24 @@ def main() -> int:
 
     print("\n3/3 · Descargando portadas")
     for project in projects:
-        preferred = (meta.get("covers") or {}).get(project["id"])
-        project["img"] = download_cover(project, preferred)
-        project["color"] = (meta.get("colors") or {}).get(project["id"], "#1a1a1e")
+        preferred = (meta.get("covers") or {}).get(project["id"]) or project.get("cover")
+        if preferred:
+            project["img"] = download_cover(project, preferred)
+        elif project.get("img"):
+            # Sin portada nueva disponible (p. ej. respaldo RSS): se conserva la actual.
+            pass
+        else:
+            project["img"] = ""
+        project["color"] = project.get("color") or (
+            meta.get("colors") or {}
+        ).get(project["id"], "#1a1a1e")
         project.pop("cover", None)
 
     prune_covers({Path(p["img"]).name for p in projects if p.get("img")})
 
     data = {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "source": FEED_URL,
+        "source": source,
         "profile": profile,
         "projects": projects,
     }

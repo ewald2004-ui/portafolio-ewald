@@ -26,7 +26,8 @@ Abre `index.html` con doble clic. No necesita servidor ni instalar nada.
 El flujo de trabajo `.github/workflows/sync-behance.yml` corre todos los días a las
 08:00 UTC y también se puede lanzar a mano desde la pestaña **Actions** de GitHub:
 
-1. Lee el feed público de Behance y la página del perfil.
+1. Lee todos los proyectos del perfil público de Behance (GraphQL paginado) y la
+   página del perfil.
 2. Descarga las portadas nuevas y elimina las que ya no existen.
 3. Regenera `data/behance.json` y `data/behance.js`.
 4. Hace commit solo si hubo cambios.
@@ -54,8 +55,11 @@ Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
 
 ## Cómo funciona
 
-- **Proyectos y portadas**: feed RSS público de Behance
-  (`behance.net/feeds/user?username=ewaldzv`). Las imágenes se piden en 808 px WebP.
+- **Proyectos y portadas**: GraphQL público de Behance
+  (`behance.net/v3/graphql`), paginado de 12 en 12 hasta traer el perfil completo.
+  Las imágenes se piden en 808 px WebP. Si GraphQL falla, el script usa como
+  respaldo el feed RSS (`behance.net/feeds/user?username=ewaldzv`), que solo
+  entrega los últimos 12 proyectos.
 - **Estadísticas, colores y experiencia**: se leen de la página pública del perfil.
   Si Behance cambia el HTML y esa lectura falla, el script conserva las estadísticas
   anteriores y no rompe la sincronización.
@@ -71,8 +75,8 @@ Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
 - **Imagen del hero**: es fija (`assets/img/hero.jpg`) y no cambia con la
   sincronización. Para reemplazarla, guarda la nueva imagen con ese mismo nombre
   (idealmente 1280 px de ancho, formato 16:9 y menos de 300 KB).
-- **Límite**: el feed entrega los últimos proyectos publicados. Si algún día tienes
-  más de los que aparecen, se pueden agregar a mano en `data/behance.json`.
+- **Proyectos**: se muestran todos los del perfil (hoy 73). Las portadas se descargan
+  al repositorio, así que el sitio no depende de Behance para cargar.
 
 ## Personalizar
 
