@@ -128,6 +128,31 @@ CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"]
 # Corresponde a "Campaña Aerochamber Laboratorios ABBOTT".
 FEATURED_ID = "257691301"
 
+# Correcciones de títulos de Behance (errata original → título mostrado).
+# Se aplican por ID en cada sincronización, así que no se pierden.
+TITLE_FIXES = {
+    # Erratas evidentes.
+    "257689665": "Campaña Endometriosis Laboratorios ABBOTT",
+    "57730621": "Universidad Diego Portales. Admisión",
+    "117714431": "CAMPAÑA BLACK FRIDAY CHILI'S RESTAURANT",
+    "117229075": "POSTEO PROMOCIÓN GIMNASIO EN PROVIDENCIA",
+    "57494915": "Atton Hoteles Expansión",
+    "75724679": "Campaña Bomberos de Chile. Hazte Socio",
+    # Nombres de marca con su escritura oficial.
+    "257691027": "Campaña RRSS BioGaia Far Laboratorios ABBOTT",
+    "57729889": "DirecTV Campaña Malos. Navidad",
+    "57497373": "Packaging DirecTV Prepago",
+    "58453921": "Post Halloween Chili's",
+    "117717263": "CAMPAÑA CHILI'S COSTANERA CENTER",
+    # Proyectos distintos que se llamaban igual: se distinguen por su portada.
+    "117225939": "Campaña Clínica NCA 2020 — Hidratación Profunda",
+    "117225541": "Campaña Clínica NCA 2020 — Tu Belleza es Natural",
+    "117225851": "Campaña Clínica NCA 2021 — Depilación Láser",
+    "117225655": "Campaña Clínica NCA 2021 — Lipoescultura",
+    "57729827": "BBVA Hipotecario 120% — 1 de 2",
+    "57800611": "BBVA Hipotecario 120% — 2 de 2",
+}
+
 
 def sort_key(project: dict) -> tuple[int, int, int]:
     """Primero el proyecto destacado, luego por categoría y por fecha descendente."""
@@ -468,6 +493,19 @@ def main() -> int:
         else:
             projects = fresh
             log(f"{len(projects)} proyectos encontrados (RSS)")
+
+    # Correcciones de títulos definidas a mano (erratas y nombres repetidos).
+    fixed_count = 0
+    for project in projects:
+        fixed = TITLE_FIXES.get(str(project.get("id")))
+        if fixed:
+            project["full"] = fixed
+            project["title"] = short_title(fixed)
+            project["category"] = category_for(fixed)
+            fixed_count += 1
+    if fixed_count:
+        log(f"{fixed_count} títulos corregidos")
+    projects.sort(key=sort_key)
 
     print("\n2/3 · Leyendo estadísticas del perfil")
     try:

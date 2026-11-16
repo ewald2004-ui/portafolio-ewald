@@ -72,6 +72,9 @@ Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
   como el primero de la grilla, sin importar categoría ni fecha; ocupa la tarjeta
   ancha. Hoy es "Campaña Aerochamber Laboratorios ABBOTT" (`257691301`). Para
   cambiarlo, reemplaza ese ID por el del proyecto que quieras destacar.
+- **Correcciones de títulos**: `TITLE_FIXES` (`scripts/sync_behance.py`) reemplaza
+  títulos por ID de proyecto. Sirve para corregir erratas de Behance y para
+  distinguir proyectos que se llamaban igual. Se aplica en cada sincronización.
 - **Imagen del hero**: es fija (`assets/img/hero.jpg`) y no cambia con la
   sincronización. Para reemplazarla, guarda la nueva imagen con ese mismo nombre
   (idealmente 1280 px de ancho, formato 16:9 y menos de 300 KB).
