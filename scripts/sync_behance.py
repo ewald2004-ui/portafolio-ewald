@@ -6,6 +6,7 @@ Fuentes:
     1. GraphQL público de Behance (todos los proyectos, paginado).
     2. Feed RSS del perfil (respaldo si GraphQL falla).
     3. Página del perfil, para estadísticas y experiencia.
+    Las imágenes y videos de cada proyecto se descargan completos al repositorio.
 
 Uso:
     python3 scripts/sync_behance.py
@@ -21,6 +22,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import shutil
 import sys
 import urllib.error
 import urllib.request
@@ -73,7 +75,13 @@ def log(msg: str) -> None:
 
 
 def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Referer": "https://www.behance.net/",
+        },
+    )
     with urllib.request.urlopen(req, timeout=TIMEOUT) as res:
         return res.read()
 
@@ -252,7 +260,34 @@ def best_cover(node: dict) -> str:
     return str(max(usable, key=lambda c: int(c.get("width") or 0))["url"])
 
 
-def fetch_graphql_projects() -> list[dict]:
+def graphql_call(query: str, variables: dict, token: str) -> dict:
+    """Llama al GraphQL de Behance con la cookie `bcp` que exige su API."""
+    payload = json.dumps({"query": query, "variables": variables}).encode("utf-8")
+    request = urllib.request.Request(
+        GRAPHQL_URL,
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": USER_AGENT,
+            "x-bcp": token,
+            "x-requested-with": "XMLHttpRequest",
+            "Origin": "https://www.behance.net",
+            "Referer": BEHANCE_URL,
+            "Cookie": f"bcp={token}",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+        data = json.loads(response.read().decode("utf-8", errors="replace"))
+    if data.get("errors"):
+        raise RuntimeError(
+            "GraphQL devolvió un error: "
+            + json.dumps(data["errors"], ensure_ascii=False)[:300]
+        )
+    return data
+
+
+def fetch_graphql_projects(token: str) -> list[dict]:
     """Pide todos los proyectos del perfil por GraphQL, paginando de 12 en 12.
 
     Behance exige una cookie `bcp` y la misma cabecera `x-bcp`; cualquier UUID
@@ -267,38 +302,12 @@ def fetch_graphql_projects() -> list[dict]:
         " colors { r g b } }"
         " pageInfo { endCursor hasNextPage } } } }"
     )
-    token = str(uuid.uuid4())
     after: str | None = None
     nodes: list[dict] = []
     seen: set[str] = set()
 
     for page in range(1, 51):
-        payload = json.dumps(
-            {"query": query, "variables": {"u": USERNAME, "a": after}}
-        ).encode("utf-8")
-        request = urllib.request.Request(
-            GRAPHQL_URL,
-            data=payload,
-            headers={
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-                "User-Agent": USER_AGENT,
-                "x-bcp": token,
-                "x-requested-with": "XMLHttpRequest",
-                "Origin": "https://www.behance.net",
-                "Referer": BEHANCE_URL,
-                "Cookie": f"bcp={token}",
-            },
-        )
-        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-            data = json.loads(response.read().decode("utf-8", errors="replace"))
-
-        if data.get("errors"):
-            raise RuntimeError(
-                "GraphQL devolvió un error: "
-                + json.dumps(data["errors"], ensure_ascii=False)[:300]
-            )
-
+        data = graphql_call(query, {"u": USERNAME, "a": after}, token)
         page_data = (
             ((data.get("data") or {}).get("user") or {}).get("profileProjects") or {}
         )
@@ -448,6 +457,163 @@ def prune_covers(valid_names: set[str]) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Descarga del contenido completo de cada proyecto
+# ---------------------------------------------------------------------------
+
+MODULES_QUERY = (
+    "query ProjectMedia($id: ProjectId!) {"
+    " project(id: $id) { modules { nodes {"
+    " __typename"
+    " ... on ImageModule { id src }"
+    " ... on VideoModule { id src thumbnailUrl }"
+    " } } } }"
+)
+
+
+def local_media(pid: str, stem: str, extensions: tuple[str, ...]) -> str:
+    """Devuelve la ruta local de un archivo ya descargado, si existe."""
+    folder = IMG_DIR / str(pid)
+    for ext in extensions:
+        file = folder / f"{stem}{ext}"
+        if file.exists():
+            return f"assets/projects/{pid}/{file.name}"
+    return ""
+
+
+def save_media(pid: str, stem: str, content: bytes, ext: str | None = None) -> str:
+    folder = IMG_DIR / str(pid)
+    folder.mkdir(parents=True, exist_ok=True)
+    dest = folder / f"{stem}{ext or detect_extension(content)}"
+    if not (dest.exists() and dest.read_bytes() == content):
+        dest.write_bytes(content)
+        log(f"descargado · {pid}/{dest.name} ({len(content) // 1024} KB)")
+    for old in folder.glob(f"{stem}.*"):
+        if old != dest:
+            old.unlink()
+    return f"assets/projects/{pid}/{dest.name}"
+
+
+def fetch_image(url: str) -> bytes:
+    """Pide la mejor versión disponible: 1200 px y, si no existe, la original."""
+    candidates = (
+        url.replace("/disp/", "/max_1200/"),
+        url.replace("/disp/", "/source/"),
+        url,
+    )
+    last: Exception | None = None
+    for candidate in candidates:
+        try:
+            return fetch(candidate)
+        except urllib.error.HTTPError as exc:
+            last = exc
+            if exc.code not in (400, 403, 404):
+                raise
+    raise RuntimeError(f"sin imagen disponible ({last})")
+
+
+def fetch_video(url: str) -> bytes:
+    """El reproductor de Behance expone un MP4 firmado; se extrae y se guarda."""
+    page = fetch_text(url)
+    match = re.search(r'https?://[^"\'<> ]+\.mp4[^"\'<> ]*', page, re.I)
+    if not match:
+        raise RuntimeError("el reproductor no entregó un MP4")
+    return fetch(match.group(0).replace("&amp;", "&"))
+
+
+def fetch_project_media(
+    project: dict, token: str, previous_media: list[dict] | None = None
+) -> list[dict]:
+    """Descarga todas las imágenes y videos de un proyecto."""
+    pid = str(project["id"])
+    try:
+        data = graphql_call(MODULES_QUERY, {"id": pid}, token)
+        nodes = (
+            (((data.get("data") or {}).get("project") or {}).get("modules") or {}).get(
+                "nodes"
+            )
+            or []
+        )
+    except (
+        urllib.error.URLError,
+        RuntimeError,
+        json.JSONDecodeError,
+        ValueError,
+        TimeoutError,
+    ) as exc:
+        log(f"contenido no disponible ({exc}); se conserva el anterior")
+        return previous_media or []
+
+    media: list[dict] = []
+    for node in nodes:
+        kind = node.get("__typename")
+        mid = str(node.get("id") or "")
+        if not mid:
+            continue
+        stem = f"m{mid}"
+
+        if kind == "ImageModule":
+            existing = local_media(pid, stem, (".webp", ".jpg", ".png"))
+            if existing:
+                media.append({"type": "image", "src": existing})
+                continue
+            src = node.get("src") or ""
+            if not src:
+                continue
+            try:
+                media.append({"type": "image", "src": save_media(pid, stem, fetch_image(src))})
+            except (urllib.error.URLError, RuntimeError, TimeoutError, ValueError) as exc:
+                log(f"sin imagen {stem} ({exc})")
+
+        elif kind == "VideoModule":
+            video = local_media(pid, stem, (".mp4",))
+            if not video:
+                src = node.get("src") or ""
+                if not src:
+                    continue
+                try:
+                    video = save_media(pid, stem, fetch_video(src), ext=".mp4")
+                except (
+                    urllib.error.URLError,
+                    RuntimeError,
+                    TimeoutError,
+                    ValueError,
+                ) as exc:
+                    log(f"sin video {stem} ({exc})")
+                    continue
+            poster = local_media(pid, f"{stem}-poster", (".webp", ".jpg", ".png"))
+            thumb = node.get("thumbnailUrl") or ""
+            if not poster and thumb:
+                try:
+                    poster = save_media(pid, f"{stem}-poster", fetch(thumb))
+                except (urllib.error.URLError, TimeoutError, ValueError):
+                    poster = ""
+            item = {"type": "video", "src": video}
+            if poster:
+                item["poster"] = poster
+            media.append(item)
+
+    if not media and project.get("img"):
+        media = [{"type": "image", "src": project["img"]}]
+    return media or previous_media or []
+
+
+def prune_media(valid_files: dict[str, set[str]]) -> None:
+    """Elimina carpetas y archivos de proyectos que ya no existen."""
+    for folder in IMG_DIR.iterdir():
+        if not folder.is_dir():
+            continue
+        names = valid_files.get(folder.name)
+        if names is None:
+            shutil.rmtree(folder)
+            log(f"eliminada carpeta · {folder.name}")
+            continue
+        for file in folder.iterdir():
+            if file.is_file() and file.name not in names:
+                file.unlink()
+                log(f"eliminada · {folder.name}/{file.name}")
+
+
+# ---------------------------------------------------------------------------
 # Programa principal
 # ---------------------------------------------------------------------------
 
@@ -463,10 +629,11 @@ def main() -> int:
     profile["username"] = USERNAME
     profile["url"] = BEHANCE_URL
 
-    print("1/3 · Leyendo proyectos de Behance")
+    token = str(uuid.uuid4())
+    print("1/4 · Leyendo proyectos de Behance")
     source = GRAPHQL_URL
     try:
-        projects = fetch_graphql_projects()
+        projects = fetch_graphql_projects(token)
         log(f"{len(projects)} proyectos encontrados (GraphQL)")
     except (
         urllib.error.URLError,
@@ -507,7 +674,7 @@ def main() -> int:
         log(f"{fixed_count} títulos corregidos")
     projects.sort(key=sort_key)
 
-    print("\n2/3 · Leyendo estadísticas del perfil")
+    print("\n2/4 · Leyendo estadísticas del perfil")
     try:
         meta = fetch_profile_meta()
         profile.update(
@@ -525,7 +692,7 @@ def main() -> int:
         meta = {}
         log(f"no disponible ({exc}); se conservan las estadísticas anteriores")
 
-    print("\n3/3 · Descargando portadas")
+    print("\n3/4 · Descargando portadas")
     for project in projects:
         preferred = (meta.get("covers") or {}).get(project["id"]) or project.get("cover")
         if preferred:
@@ -541,6 +708,28 @@ def main() -> int:
         project.pop("cover", None)
 
     prune_covers({Path(p["img"]).name for p in projects if p.get("img")})
+
+    print("\n4/4 · Descargando contenido de cada proyecto")
+    previous_media = {
+        str(p.get("id")): p.get("media") or []
+        for p in (previous.get("projects") or [])
+    }
+    valid_files: dict[str, set[str]] = {}
+    for project in projects:
+        pid = str(project["id"])
+        if source == GRAPHQL_URL:
+            media = fetch_project_media(project, token, previous_media.get(pid, []))
+        else:
+            media = previous_media.get(pid, [])
+        project["media"] = media
+        names: set[str] = set()
+        for item in media:
+            for key in ("src", "poster"):
+                if item.get(key):
+                    names.add(Path(item[key]).name)
+        valid_files[pid] = names
+        log(f"{pid}: {len(media)} archivos")
+    prune_media(valid_files)
 
     data = {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),

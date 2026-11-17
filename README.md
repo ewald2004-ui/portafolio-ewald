@@ -11,6 +11,7 @@ index.html                  Sitio completo (HTML + CSS + JS)
 data/behance.json           Datos sincronizados (fuente de verdad)
 data/behance.js             Los mismos datos, para cargar con <script> (funciona en file://)
 assets/projects/<id>.webp   Portadas descargadas, nombradas por ID de proyecto
+assets/projects/<id>/       Imágenes y videos completos de cada proyecto (galería)
 assets/img/avatar.jpg       Retrato usado en "Sobre mí"
 assets/img/hero.jpg         Imagen grande de portada (hero) y de las vistas previas al compartir
 scripts/sync_behance.py     Sincronizador con Behance (solo Python 3, sin dependencias)
@@ -29,8 +30,10 @@ El flujo de trabajo `.github/workflows/sync-behance.yml` corre todos los días a
 1. Lee todos los proyectos del perfil público de Behance (GraphQL paginado) y la
    página del perfil.
 2. Descarga las portadas nuevas y elimina las que ya no existen.
-3. Regenera `data/behance.json` y `data/behance.js`.
-4. Hace commit solo si hubo cambios.
+3. Descarga todas las imágenes y videos de cada proyecto a `assets/projects/<id>/`;
+   los archivos ya presentes se reutilizan.
+4. Regenera `data/behance.json` y `data/behance.js`.
+5. Hace commit solo si hubo cambios.
 
 Para activarlo:
 
@@ -51,10 +54,16 @@ python3 scripts/sync_behance.py
 ```
 
 No requiere `pip install`: usa solo la biblioteca estándar de Python 3.9+.
-Cada ejecución imprime cuántos proyectos encontró y qué portadas descargó.
+Cada ejecución imprime cuántos proyectos encontró y qué archivos descargó.
 
 ## Cómo funciona
 
+- **Contenido completo**: por cada proyecto se descargan todas sus imágenes y
+  videos a `assets/projects/<id>/` y se listan en `media` dentro de los datos.
+  Al abrir una tarjeta se muestra esa galería completa dentro del sitio, sin
+  botón ni redirección a Behance. Los videos se obtienen de URLs firmadas que
+  caducan, por eso el bot vuelve a pedirlas en cada sincronización; si el
+  contenido ya está descargado, no se vuelve a bajar.
 - **Proyectos y portadas**: GraphQL público de Behance
   (`behance.net/v3/graphql`), paginado de 12 en 12 hasta traer el perfil completo.
   Las imágenes se piden en 808 px WebP. Si GraphQL falla, el script usa como

@@ -388,8 +388,34 @@
     transform:translateY(16px) scale(.99);transition:transform .35s cubic-bezier(.2,.7,.2,1);
   }
   .modal.open .modal-box{transform:none}
-  .modal-img{background:#000;aspect-ratio:16/10}
-  .modal-img img{width:100%;height:100%;object-fit:contain}
+  .modal-stage{position:relative;background:#000;aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden}
+  .stage-media{width:100%;height:100%;display:grid;place-items:center}
+  .stage-media img,.stage-media video{width:100%;height:100%;object-fit:contain}
+  .stage-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;
+    background:rgba(11,11,12,.72);border:1px solid var(--line-strong);
+    display:grid;place-items:center;transition:background .25s,color .25s;
+  }
+  .stage-arrow:hover{background:var(--accent);color:#0b0b0c}
+  .stage-arrow svg{width:15px;height:15px}
+  .stage-prev{left:12px}
+  .stage-next{right:12px}
+  .stage-arrow[hidden],.stage-count[hidden]{display:none}
+  .stage-count{
+    position:absolute;bottom:12px;right:12px;border-radius:100px;padding:5px 11px;
+    background:rgba(11,11,12,.72);border:1px solid var(--line-strong);
+    font-size:.68rem;letter-spacing:.1em;
+  }
+  .modal-thumbs{display:flex;gap:8px;overflow-x:auto;padding:12px clamp(20px,3vw,32px) 0;scrollbar-width:thin}
+  .modal-thumbs button{
+    flex:0 0 auto;width:78px;height:58px;padding:0;border-radius:6px;overflow:hidden;
+    border:1px solid var(--line);background:#111;transition:border-color .2s,box-shadow .2s;
+  }
+  .modal-thumbs button:hover{border-color:var(--line-strong)}
+  .modal-thumbs button.is-active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+  .modal-thumbs img{width:100%;height:100%;object-fit:cover}
+  .thumb-video{position:relative;display:block;width:100%;height:100%}
+  .thumb-video::after{content:"▶";position:absolute;inset:0;display:grid;place-items:center;color:#fff;background:rgba(0,0,0,.38);font-size:.8rem}
   .modal-info{
     display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;
     padding:clamp(20px,3vw,32px);
@@ -459,7 +485,7 @@
     .card.is-wide .card-media{aspect-ratio:4/3}
     .about-columns{grid-template-columns:1fr}
     .about-badge{right:12px;width:96px;height:96px}
-    .modal-img{aspect-ratio:4/3}
+    .modal-stage{aspect-ratio:4/3}
     .section-head h2{font-size:clamp(2.2rem,10vw,3.4rem)}
     .footer-inner{justify-content:center;text-align:center}
   }
@@ -560,11 +586,7 @@
       <div class="grid" id="projectGrid"></div>
 
       <div class="grid-note">
-        <span id="gridNote">Una selección de trabajos publicados en Behance.</span>
-        <a class="link-arrow" href="https://www.behance.net/ewaldzv" target="_blank" rel="noopener">
-          Ver perfil completo en Behance
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-        </a>
+        <span id="gridNote">Todos los proyectos, con su contenido completo dentro del sitio.</span>
       </div>
     </div>
   </section>
@@ -718,16 +740,22 @@
       <button id="modalPrev" aria-label="Proyecto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
       <button id="modalNext" aria-label="Proyecto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
-    <div class="modal-img"><img id="modalImg" alt=""></div>
+    <div class="modal-stage">
+      <div class="stage-media" id="stageMedia" aria-live="polite"></div>
+      <button class="stage-arrow stage-prev" id="mediaPrev" aria-label="Archivo anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="stage-arrow stage-next" id="mediaNext" aria-label="Archivo siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <span class="stage-count" id="mediaCount" aria-hidden="true"></span>
+    </div>
+    <div class="modal-thumbs" id="modalThumbs" role="group" aria-label="Archivos del proyecto"></div>
     <div class="modal-info">
       <div>
         <p class="card-meta" style="margin-bottom:6px"><span class="tag" id="modalTag"></span><span id="modalYear"></span></p>
         <h3 id="modalTitle"></h3>
       </div>
-      <a class="btn btn-primary" id="modalLink" href="#" target="_blank" rel="noopener">
-        Ver en Behance
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-      </a>
     </div>
   </div>
 </div>
@@ -812,26 +840,88 @@
     });
   });
 
-  /* Modal */
+  /* Modal con la galería completa del proyecto */
   const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImg");
+  const stageMedia = document.getElementById("stageMedia");
+  const modalThumbs = document.getElementById("modalThumbs");
+  const mediaCount = document.getElementById("mediaCount");
+  const mediaPrev = document.getElementById("mediaPrev");
+  const mediaNext = document.getElementById("mediaNext");
   const modalTitle = document.getElementById("modalTitle");
   const modalTag = document.getElementById("modalTag");
   const modalYear = document.getElementById("modalYear");
-  const modalLink = document.getElementById("modalLink");
   let current = 0;
+  let mediaIndex = 0;
   let lastFocus = null;
 
-  function openModal(index) {
-    current = index;
-    const p = projects[index];
-    modalImg.src = p.img;
-    modalImg.alt = p.full + " — proyecto de Ewald Zamorano";
+  function projectMedia(p) {
+    const items = (p.media || []).filter((m) => m && m.src);
+    return items.length ? items : [{ type: "image", src: p.img }];
+  }
+
+  function renderMedia() {
+    const p = projects[current];
+    const items = projectMedia(p);
+    if (mediaIndex >= items.length) mediaIndex = 0;
+    const item = items[mediaIndex];
+    stageMedia.replaceChildren();
+    if (item.type === "video") {
+      const video = document.createElement("video");
+      video.src = item.src;
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      if (item.poster) video.poster = item.poster;
+      video.setAttribute("aria-label", `${p.full} — video ${mediaIndex + 1}`);
+      stageMedia.appendChild(video);
+    } else {
+      const img = document.createElement("img");
+      img.src = item.src;
+      img.alt = `${p.full} — imagen ${mediaIndex + 1}`;
+      stageMedia.appendChild(img);
+    }
+    mediaCount.textContent = `${mediaIndex + 1} / ${items.length}`;
+    const single = items.length < 2;
+    mediaCount.hidden = single;
+    mediaPrev.hidden = single;
+    mediaNext.hidden = single;
+    modalThumbs.querySelectorAll("button").forEach((b, i) => {
+      b.classList.toggle("is-active", i === mediaIndex);
+      b.setAttribute("aria-pressed", String(i === mediaIndex));
+    });
+  }
+
+  function renderThumbs() {
+    const items = projectMedia(projects[current]);
+    modalThumbs.innerHTML = items.map((m, i) => `
+      <button type="button" data-index="${i}" aria-label="Ver archivo ${i + 1} de ${items.length}" aria-pressed="${i === mediaIndex}">
+        ${m.type === "video"
+          ? `<span class="thumb-video">${m.poster ? `<img src="${m.poster}" alt="" loading="lazy">` : ""}</span>`
+          : `<img src="${m.src}" alt="" loading="lazy">`}
+      </button>
+    `).join("");
+    modalThumbs.querySelectorAll("button").forEach((b) => {
+      b.addEventListener("click", () => {
+        mediaIndex = Number(b.dataset.index);
+        renderMedia();
+      });
+    });
+  }
+
+  function showProject(index) {
+    current = (index + projects.length) % projects.length;
+    const p = projects[current];
+    mediaIndex = 0;
     modalTitle.textContent = p.full;
     modalTag.textContent = p.category;
     modalYear.textContent = p.year;
-    modalLink.href = p.url;
+    renderThumbs();
+    renderMedia();
+  }
+
+  function openModal(index) {
     lastFocus = document.activeElement;
+    showProject(index);
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.classList.add("locked");
@@ -842,29 +932,33 @@
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("locked");
+    stageMedia.replaceChildren();
     if (lastFocus) lastFocus.focus();
   }
 
-  function step(dir) {
-    current = (current + dir + projects.length) % projects.length;
-    const p = projects[current];
-    modalImg.src = p.img;
-    modalImg.alt = p.full + " — proyecto de Ewald Zamorano";
-    modalTitle.textContent = p.full;
-    modalTag.textContent = p.category;
-    modalYear.textContent = p.year;
-    modalLink.href = p.url;
+  function stepMedia(dir) {
+    const items = projectMedia(projects[current]);
+    if (items.length < 2) return;
+    mediaIndex = (mediaIndex + dir + items.length) % items.length;
+    renderMedia();
+  }
+
+  function stepProject(dir) {
+    showProject(current + dir);
   }
 
   document.getElementById("modalClose").addEventListener("click", closeModal);
-  document.getElementById("modalPrev").addEventListener("click", () => step(-1));
-  document.getElementById("modalNext").addEventListener("click", () => step(1));
+  document.getElementById("modalPrev").addEventListener("click", () => stepProject(-1));
+  document.getElementById("modalNext").addEventListener("click", () => stepProject(1));
+  mediaPrev.addEventListener("click", () => stepMedia(-1));
+  mediaNext.addEventListener("click", () => stepMedia(1));
   modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", (e) => {
     if (!modal.classList.contains("open")) return;
     if (e.key === "Escape") closeModal();
-    if (e.key === "ArrowLeft") step(-1);
-    if (e.key === "ArrowRight") step(1);
+    if (e.target && e.target.tagName === "VIDEO") return;
+    if (e.key === "ArrowLeft") e.shiftKey ? stepProject(-1) : stepMedia(-1);
+    if (e.key === "ArrowRight") e.shiftKey ? stepProject(1) : stepMedia(1);
   });
 
   /* Nav */
@@ -922,7 +1016,7 @@
       const date = new Intl.DateTimeFormat("es-CL", {
         day: "numeric", month: "short", year: "numeric"
       }).format(new Date(data.generatedAt));
-      note.textContent = projects.length + " proyectos publicados en Behance · Actualizado el " + date;
+      note.textContent = projects.length + " proyectos · contenido completo en el sitio · Actualizado el " + date;
     }
   }
 

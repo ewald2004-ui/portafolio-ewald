@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-16T12:55:54+00:00",
+  "generatedAt": "2026-11-17T13:43:47+00:00",
   "source": "https://www.behance.net/v3/graphql",
   "profile": {
     "username": "ewaldzv",
@@ -10,7 +10,7 @@ window.BEHANCE_DATA = {
     "email": "ewald2004@gmail.com",
     "url": "https://www.behance.net/ewaldzv",
     "stats": {
-      "views": 1512,
+      "views": 1518,
       "appreciations": 51,
       "followers": 19
     },
@@ -65,7 +65,35 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Campañas",
       "color": "#9a5518",
-      "img": "assets/projects/257691301.webp"
+      "img": "assets/projects/257691301.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257691301/m1505521205.mp4",
+          "poster": "assets/projects/257691301/m1505521205-poster.jpg"
+        },
+        {
+          "type": "video",
+          "src": "assets/projects/257691301/m1505521207.mp4",
+          "poster": "assets/projects/257691301/m1505521207-poster.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691301/m1505522463.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691301/m1505522465.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691301/m1505522459.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691301/m1505522461.jpg"
+        }
+      ]
     },
     {
       "id": "257694435",
@@ -76,7 +104,33 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Campañas",
       "color": "#010101",
-      "img": "assets/projects/257694435.webp"
+      "img": "assets/projects/257694435.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257694435/m1505547125.mp4",
+          "poster": "assets/projects/257694435/m1505547125-poster.jpg"
+        },
+        {
+          "type": "video",
+          "src": "assets/projects/257694435/m1505547127.mp4",
+          "poster": "assets/projects/257694435/m1505547127-poster.jpg"
+        },
+        {
+          "type": "video",
+          "src": "assets/projects/257694435/m1505547129.mp4",
+          "poster": "assets/projects/257694435/m1505547129-poster.jpg"
+        },
+        {
+          "type": "video",
+          "src": "assets/projects/257694435/m1505547131.mp4",
+          "poster": "assets/projects/257694435/m1505547131-poster.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257694435/m1507447493.png"
+        }
+      ]
     },
     {
       "id": "257694229",
@@ -87,7 +141,25 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Campañas",
       "color": "#0183ff",
-      "img": "assets/projects/257694229.webp"
+      "img": "assets/projects/257694229.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257694229/m1505545279.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257694229/m1505545273.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257694229/m1505545275.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257694229/m1505545277.png"
+        }
+      ]
     },
     {
       "id": "257693355",
@@ -98,7 +170,25 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Campañas",
       "color": "#032e4b",
-      "img": "assets/projects/257693355.webp"
+      "img": "assets/projects/257693355.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257693355/m1505538193.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257693355/m1505538197.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257693355/m1505538195.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257693355/m1505538191.jpg"
+        }
+      ]
     },
     {
       "id": "257692161",
@@ -109,7 +199,29 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Campañas",
       "color": "#070707",
-      "img": "assets/projects/257692161.webp"
+      "img": "assets/projects/257692161.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257692161/m1505527719.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257692161/m1505527731.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257692161/m1505527727.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257692161/m1505527715.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257692161/m1505527723.png"
+        }
+      ]
     },
     {
       "id": "257691661",
@@ -120,29 +232,88 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Campañas",
       "color": "#1d0c0a",
-      "img": "assets/projects/257691661.webp"
+      "img": "assets/projects/257691661.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257691661/m1505523733.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691661/m1505523731.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691661/m1505523737.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257691661/m1505523735.png"
+        }
+      ]
     },
     {
       "id": "257691027",
       "title": "Campaña RRSS BioGaia Far Laboratorios ABBOTT",
       "full": "Campaña RRSS BioGaia Far Laboratorios ABBOTT",
-      "url": "https://www.behance.net/gallery/257691027/Campana-RRSS-Biogaia-Far-Laboratorios-ABBOTT",
+      "url": "https://www.behance.net/gallery/257691027/Campana-RRSS-BioGaia-Far-Laboratorios-ABBOTT",
       "publishedOn": 1793127095,
       "year": 2026,
       "category": "Campañas",
       "color": "#3a3439",
-      "img": "assets/projects/257691027.webp"
+      "img": "assets/projects/257691027.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257691027/m1505518861.mp4"
+        },
+        {
+          "type": "video",
+          "src": "assets/projects/257691027/m1505518865.mp4"
+        },
+        {
+          "type": "video",
+          "src": "assets/projects/257691027/m1505518867.mp4",
+          "poster": "assets/projects/257691027/m1505518867-poster.jpg"
+        }
+      ]
     },
     {
       "id": "257689665",
       "title": "Campaña Endometriosis Laboratorios ABBOTT",
       "full": "Campaña Endometriosis Laboratorios ABBOTT",
-      "url": "https://www.behance.net/gallery/257689665/Campana-Edometriosis-Laboratorios-ABBOTT",
+      "url": "https://www.behance.net/gallery/257689665/Campana-Endometriosis-Laboratorios-ABBOTT",
       "publishedOn": 1793125322,
       "year": 2026,
       "category": "Campañas",
       "color": "#090907",
-      "img": "assets/projects/257689665.webp"
+      "img": "assets/projects/257689665.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257689665/m1505507735.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257689665/m1505507743.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257689665/m1505507745.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257689665/m1505507739.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257689665/m1505507741.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257689665/m1505507737.jpg"
+        }
+      ]
     },
     {
       "id": "117717263",
@@ -153,7 +324,21 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#170f07",
-      "img": "assets/projects/117717263.webp"
+      "img": "assets/projects/117717263.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117717263/m670788807.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117717263/m670788811.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117717263/m670788809.jpg"
+        }
+      ]
     },
     {
       "id": "117716379",
@@ -164,18 +349,42 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#f8fafd",
-      "img": "assets/projects/117716379.webp"
+      "img": "assets/projects/117716379.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117716379/m670784059.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117716379/m670784063.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117716379/m670784061.png"
+        }
+      ]
     },
     {
       "id": "117714431",
       "title": "CAMPAÑA BLACK FRIDAY CHILI'S RESTAURANT",
       "full": "CAMPAÑA BLACK FRIDAY CHILI'S RESTAURANT",
-      "url": "https://www.behance.net/gallery/117714431/CAMPANA-BLACK-FRIDAY-CHILIS-RESTAURAN",
+      "url": "https://www.behance.net/gallery/117714431/CAMPANA-BLACK-FRIDAY-CHILIS-RESTAURANT",
       "publishedOn": 1618675600,
       "year": 2021,
       "category": "Campañas",
       "color": "#c23c11",
-      "img": "assets/projects/117714431.webp"
+      "img": "assets/projects/117714431.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117714431/m670773419.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117714431/m670773421.jpg"
+        }
+      ]
     },
     {
       "id": "117713849",
@@ -186,7 +395,33 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#040c8b",
-      "img": "assets/projects/117713849.webp"
+      "img": "assets/projects/117713849.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117713849/m670770313.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117713849/m670770319.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117713849/m670770311.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117713849/m670770315.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117713849/m670770317.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117713849/m670770309.png"
+        }
+      ]
     },
     {
       "id": "117713333",
@@ -197,7 +432,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#fdfefe",
-      "img": "assets/projects/117713333.webp"
+      "img": "assets/projects/117713333.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117713333/m670767415.png"
+        }
+      ]
     },
     {
       "id": "117713229",
@@ -208,7 +449,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#b7c1ca",
-      "img": "assets/projects/117713229.webp"
+      "img": "assets/projects/117713229.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117713229/m670766907.png"
+        }
+      ]
     },
     {
       "id": "117713015",
@@ -219,7 +466,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#fdfefe",
-      "img": "assets/projects/117713015.webp"
+      "img": "assets/projects/117713015.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117713015/m670765823.png"
+        }
+      ]
     },
     {
       "id": "117225975",
@@ -230,7 +483,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#4a02af",
-      "img": "assets/projects/117225975.webp"
+      "img": "assets/projects/117225975.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225975/m668207937.png"
+        }
+      ]
     },
     {
       "id": "117225939",
@@ -241,7 +500,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#ffa29e",
-      "img": "assets/projects/117225939.webp"
+      "img": "assets/projects/117225939.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225939/m668207813.png"
+        }
+      ]
     },
     {
       "id": "117225851",
@@ -252,7 +517,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#fefefe",
-      "img": "assets/projects/117225851.webp"
+      "img": "assets/projects/117225851.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225851/m668207193.png"
+        }
+      ]
     },
     {
       "id": "117225783",
@@ -263,7 +534,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#3e3329",
-      "img": "assets/projects/117225783.webp"
+      "img": "assets/projects/117225783.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225783/m668206983.png"
+        }
+      ]
     },
     {
       "id": "117225655",
@@ -274,7 +551,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#ffb290",
-      "img": "assets/projects/117225655.webp"
+      "img": "assets/projects/117225655.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225655/m668206443.png"
+        }
+      ]
     },
     {
       "id": "117225541",
@@ -285,7 +568,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#070707",
-      "img": "assets/projects/117225541.webp"
+      "img": "assets/projects/117225541.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225541/m668205985.png"
+        }
+      ]
     },
     {
       "id": "117225377",
@@ -296,7 +585,21 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#010801",
-      "img": "assets/projects/117225377.webp"
+      "img": "assets/projects/117225377.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117225377/m668205219.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117225377/m668205223.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/117225377/m668205221.png"
+        }
+      ]
     },
     {
       "id": "116454171",
@@ -307,7 +610,21 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Campañas",
       "color": "#631d0c",
-      "img": "assets/projects/116454171.webp"
+      "img": "assets/projects/116454171.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/116454171/m664127903.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/116454171/m664127905.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/116454171/m664127907.jpg"
+        }
+      ]
     },
     {
       "id": "75725069",
@@ -318,7 +635,21 @@ window.BEHANCE_DATA = {
       "year": 2019,
       "category": "Campañas",
       "color": "#54c1ff",
-      "img": "assets/projects/75725069.webp"
+      "img": "assets/projects/75725069.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/75725069/m465196107.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/75725069/m465196101.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/75725069/m440034211.jpg"
+        }
+      ]
     },
     {
       "id": "75724777",
@@ -329,18 +660,46 @@ window.BEHANCE_DATA = {
       "year": 2019,
       "category": "Campañas",
       "color": "#cdd1d3",
-      "img": "assets/projects/75724777.webp"
+      "img": "assets/projects/75724777.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/75724777/m440032379.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/75724777/m440032381.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/75724777/m440032383.jpg"
+        }
+      ]
     },
     {
       "id": "75724679",
       "title": "Campaña Bomberos de Chile. Hazte Socio",
       "full": "Campaña Bomberos de Chile. Hazte Socio",
-      "url": "https://www.behance.net/gallery/75724679/Campana-Bomberos-de-Chile-Azte-Socio",
+      "url": "https://www.behance.net/gallery/75724679/Campana-Bomberos-de-Chile-Hazte-Socio",
       "publishedOn": 1549034060,
       "year": 2019,
       "category": "Campañas",
       "color": "#d7534d",
-      "img": "assets/projects/75724679.webp"
+      "img": "assets/projects/75724679.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/75724679/m440031653.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/75724679/m440031649.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/75724679/m440031651.jpg"
+        }
+      ]
     },
     {
       "id": "58045465",
@@ -351,7 +710,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Campañas",
       "color": "#aaa4a4",
-      "img": "assets/projects/58045465.webp"
+      "img": "assets/projects/58045465.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/58045465/m385747673.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/58045465/m385747675.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/58045465/m385747671.jpg"
+        }
+      ]
     },
     {
       "id": "57729889",
@@ -362,7 +735,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Campañas",
       "color": "#9f9a9c",
-      "img": "assets/projects/57729889.webp"
+      "img": "assets/projects/57729889.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57729889/m339869601.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57729889/m339869597.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57729889/m339869599.jpg"
+        }
+      ]
     },
     {
       "id": "57491763",
@@ -373,7 +760,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Campañas",
       "color": "#f0eae4",
-      "img": "assets/projects/57491763.webp"
+      "img": "assets/projects/57491763.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57491763/m338475743.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57491763/m338476049.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57491763/m338476047.jpg"
+        }
+      ]
     },
     {
       "id": "257692997",
@@ -384,7 +785,14 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Videos",
       "color": "#0c0d11",
-      "img": "assets/projects/257692997.webp"
+      "img": "assets/projects/257692997.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257692997/m1505534869.mp4",
+          "poster": "assets/projects/257692997/m1505534869-poster.jpg"
+        }
+      ]
     },
     {
       "id": "257690581",
@@ -395,7 +803,14 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Videos",
       "color": "#a0581a",
-      "img": "assets/projects/257690581.webp"
+      "img": "assets/projects/257690581.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257690581/m1505515323.mp4",
+          "poster": "assets/projects/257690581/m1505515323-poster.jpg"
+        }
+      ]
     },
     {
       "id": "257690171",
@@ -406,7 +821,14 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Videos",
       "color": "#372e2d",
-      "img": "assets/projects/257690171.webp"
+      "img": "assets/projects/257690171.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257690171/m1505511617.mp4",
+          "poster": "assets/projects/257690171/m1505511617-poster.jpg"
+        }
+      ]
     },
     {
       "id": "257740625",
@@ -417,7 +839,18 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Inmobiliario",
       "color": "#aea593",
-      "img": "assets/projects/257740625.webp"
+      "img": "assets/projects/257740625.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257740625/m1505909291.mp4",
+          "poster": "assets/projects/257740625/m1505909291-poster.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257740625/m1505909293.jpg"
+        }
+      ]
     },
     {
       "id": "257740219",
@@ -428,7 +861,17 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Inmobiliario",
       "color": "#d3d0cc",
-      "img": "assets/projects/257740219.webp"
+      "img": "assets/projects/257740219.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257740219/m1505906161.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257740219/m1505906159.jpg"
+        }
+      ]
     },
     {
       "id": "257740095",
@@ -439,7 +882,13 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Inmobiliario",
       "color": "#b9bab1",
-      "img": "assets/projects/257740095.webp"
+      "img": "assets/projects/257740095.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257740095/m1505905525.jpg"
+        }
+      ]
     },
     {
       "id": "257739905",
@@ -450,7 +899,21 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Inmobiliario",
       "color": "#1b1b1b",
-      "img": "assets/projects/257739905.webp"
+      "img": "assets/projects/257739905.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257739905/m1505904169.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739905/m1505904171.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739905/m1505904167.png"
+        }
+      ]
     },
     {
       "id": "257739727",
@@ -461,7 +924,41 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Inmobiliario",
       "color": "#aeaeae",
-      "img": "assets/projects/257739727.webp"
+      "img": "assets/projects/257739727.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505902957.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505902965.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505902963.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505902967.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505902969.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505902961.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505903363.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257739727/m1505903361.jpg"
+        }
+      ]
     },
     {
       "id": "257693605",
@@ -472,7 +969,21 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Stand",
       "color": "#0b0a0b",
-      "img": "assets/projects/257693605.webp"
+      "img": "assets/projects/257693605.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257693605/m1505540199.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257693605/m1505540197.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257693605/m1505540195.jpg"
+        }
+      ]
     },
     {
       "id": "258530757",
@@ -483,7 +994,13 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Proyecto",
       "color": "#eff0ea",
-      "img": "assets/projects/258530757.webp"
+      "img": "assets/projects/258530757.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/258530757/m1512219991.png"
+        }
+      ]
     },
     {
       "id": "257692415",
@@ -494,18 +1011,38 @@ window.BEHANCE_DATA = {
       "year": 2026,
       "category": "Proyecto",
       "color": "#e9e9e9",
-      "img": "assets/projects/257692415.webp"
+      "img": "assets/projects/257692415.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/257692415/m1505529751.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257692415/m1505529757.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/257692415/m1505529755.png"
+        }
+      ]
     },
     {
       "id": "117229075",
       "title": "POSTEO PROMOCIÓN GIMNASIO EN PROVIDENCIA",
       "full": "POSTEO PROMOCIÓN GIMNASIO EN PROVIDENCIA",
-      "url": "https://www.behance.net/gallery/117229075/POSTEO-PROMOCION-GIMNACIO-EN-PROVIDENCIA",
+      "url": "https://www.behance.net/gallery/117229075/POSTEO-PROMOCION-GIMNASIO-EN-PROVIDENCIA",
       "publishedOn": 1618067293,
       "year": 2021,
       "category": "Proyecto",
       "color": "#110503",
-      "img": "assets/projects/117229075.webp"
+      "img": "assets/projects/117229075.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117229075/m668223179.png"
+        }
+      ]
     },
     {
       "id": "117226153",
@@ -516,7 +1053,13 @@ window.BEHANCE_DATA = {
       "year": 2021,
       "category": "Proyecto",
       "color": "#e9e4e0",
-      "img": "assets/projects/117226153.webp"
+      "img": "assets/projects/117226153.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/117226153/m668208869.png"
+        }
+      ]
     },
     {
       "id": "75725371",
@@ -527,7 +1070,13 @@ window.BEHANCE_DATA = {
       "year": 2019,
       "category": "Proyecto",
       "color": "#f2f4f4",
-      "img": "assets/projects/75725371.webp"
+      "img": "assets/projects/75725371.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/75725371/m440035849.jpg"
+        }
+      ]
     },
     {
       "id": "64362051",
@@ -538,7 +1087,13 @@ window.BEHANCE_DATA = {
       "year": 2018,
       "category": "Proyecto",
       "color": "#faf9fa",
-      "img": "assets/projects/64362051.webp"
+      "img": "assets/projects/64362051.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/64362051/m377181533.jpg"
+        }
+      ]
     },
     {
       "id": "58454181",
@@ -549,7 +1104,25 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#d7d7d7",
-      "img": "assets/projects/58454181.webp"
+      "img": "assets/projects/58454181.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/58454181/m343980375.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/58454181/m343980371.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/58454181/m343980373.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/58454181/m343980369.jpg"
+        }
+      ]
     },
     {
       "id": "58453921",
@@ -560,7 +1133,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#0c0c0d",
-      "img": "assets/projects/58453921.webp"
+      "img": "assets/projects/58453921.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/58453921/m343978905.jpg"
+        }
+      ]
     },
     {
       "id": "58453359",
@@ -571,7 +1150,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#a09b9d",
-      "img": "assets/projects/58453359.webp"
+      "img": "assets/projects/58453359.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/58453359/m343975991.jpg"
+        }
+      ]
     },
     {
       "id": "57818439",
@@ -582,7 +1167,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#aba3a3",
-      "img": "assets/projects/57818439.webp"
+      "img": "assets/projects/57818439.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57818439/m340353221.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57818439/m340353219.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57818439/m340353217.jpg"
+        }
+      ]
     },
     {
       "id": "57800611",
@@ -593,7 +1192,17 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#fcfcfc",
-      "img": "assets/projects/57800611.webp"
+      "img": "assets/projects/57800611.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57800611/m340250357.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57800611/m340250359.jpg"
+        }
+      ]
     },
     {
       "id": "57733837",
@@ -604,7 +1213,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#01a8fa",
-      "img": "assets/projects/57733837.webp"
+      "img": "assets/projects/57733837.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57733837/m340358537.jpg"
+        }
+      ]
     },
     {
       "id": "57730957",
@@ -615,7 +1230,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#a3a0a4",
-      "img": "assets/projects/57730957.webp"
+      "img": "assets/projects/57730957.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730957/m339865447.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730957/m339865449.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730957/m339865451.jpg"
+        }
+      ]
     },
     {
       "id": "57730789",
@@ -626,18 +1255,46 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#9f9a9c",
-      "img": "assets/projects/57730789.webp"
+      "img": "assets/projects/57730789.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730789/m339864709.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730789/m339864711.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730789/m339864713.jpg"
+        }
+      ]
     },
     {
       "id": "57730621",
       "title": "Universidad Diego Portales. Admisión",
       "full": "Universidad Diego Portales. Admisión",
-      "url": "https://www.behance.net/gallery/57730621/Uiversidad-Diego-Portales-Admision",
+      "url": "https://www.behance.net/gallery/57730621/Universidad-Diego-Portales-Admision",
       "publishedOn": 1507921473,
       "year": 2017,
       "category": "Proyecto",
       "color": "#a49f9b",
-      "img": "assets/projects/57730621.webp"
+      "img": "assets/projects/57730621.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730621/m339863829.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730621/m339863827.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730621/m339863831.jpg"
+        }
+      ]
     },
     {
       "id": "57730523",
@@ -648,7 +1305,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#000000",
-      "img": "assets/projects/57730523.webp"
+      "img": "assets/projects/57730523.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730523/m339863273.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730523/m339863271.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730523/m339863269.jpg"
+        }
+      ]
     },
     {
       "id": "57730447",
@@ -659,7 +1330,17 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#f7f7f7",
-      "img": "assets/projects/57730447.webp"
+      "img": "assets/projects/57730447.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730447/m339862861.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730447/m339862863.jpg"
+        }
+      ]
     },
     {
       "id": "57730387",
@@ -670,7 +1351,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#004fa6",
-      "img": "assets/projects/57730387.webp"
+      "img": "assets/projects/57730387.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730387/m339862605.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730387/m339862607.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730387/m339862609.jpg"
+        }
+      ]
     },
     {
       "id": "57730233",
@@ -681,7 +1376,17 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#a5a09b",
-      "img": "assets/projects/57730233.webp"
+      "img": "assets/projects/57730233.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730233/m339861759.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57730233/m339861761.jpg"
+        }
+      ]
     },
     {
       "id": "57730001",
@@ -692,7 +1397,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#b6a5a1",
-      "img": "assets/projects/57730001.webp"
+      "img": "assets/projects/57730001.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57730001/m339860673.jpg"
+        }
+      ]
     },
     {
       "id": "57729827",
@@ -703,7 +1414,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#006fa5",
-      "img": "assets/projects/57729827.webp"
+      "img": "assets/projects/57729827.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57729827/m339859669.jpg"
+        }
+      ]
     },
     {
       "id": "57729521",
@@ -714,7 +1431,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#9f9a9c",
-      "img": "assets/projects/57729521.webp"
+      "img": "assets/projects/57729521.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57729521/m339858207.jpg"
+        }
+      ]
     },
     {
       "id": "57729459",
@@ -725,7 +1448,13 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#a09b9d",
-      "img": "assets/projects/57729459.webp"
+      "img": "assets/projects/57729459.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57729459/m339857903.jpg"
+        }
+      ]
     },
     {
       "id": "57499595",
@@ -736,7 +1465,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#fcfcfc",
-      "img": "assets/projects/57499595.webp"
+      "img": "assets/projects/57499595.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57499595/m338522341.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57499595/m338522337.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57499595/m338522339.jpg"
+        }
+      ]
     },
     {
       "id": "57499481",
@@ -747,7 +1490,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#d4e5f0",
-      "img": "assets/projects/57499481.webp"
+      "img": "assets/projects/57499481.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57499481/m338521669.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57499481/m338521673.png"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57499481/m338521671.png"
+        }
+      ]
     },
     {
       "id": "57499061",
@@ -758,7 +1515,17 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#b6b6ae",
-      "img": "assets/projects/57499061.webp"
+      "img": "assets/projects/57499061.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57499061/m338519295.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57499061/m338519293.jpg"
+        }
+      ]
     },
     {
       "id": "57498783",
@@ -769,7 +1536,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#fcfcfc",
-      "img": "assets/projects/57498783.webp"
+      "img": "assets/projects/57498783.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57498783/m338517533.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57498783/m338517537.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57498783/m338517535.jpg"
+        }
+      ]
     },
     {
       "id": "57498191",
@@ -780,7 +1561,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#ecdfcc",
-      "img": "assets/projects/57498191.webp"
+      "img": "assets/projects/57498191.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57498191/m338513645.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57498191/m338513641.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57498191/m338513643.jpg"
+        }
+      ]
     },
     {
       "id": "57497779",
@@ -791,7 +1586,33 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#132333",
-      "img": "assets/projects/57497779.webp"
+      "img": "assets/projects/57497779.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57497779/m338511299.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497779/m338511305.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497779/m338511307.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497779/m338511303.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497779/m338511301.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497779/m338511297.jpg"
+        }
+      ]
     },
     {
       "id": "57497555",
@@ -802,7 +1623,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#ffeccf",
-      "img": "assets/projects/57497555.webp"
+      "img": "assets/projects/57497555.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57497555/m338509795.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497555/m338509793.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497555/m338509797.jpg"
+        }
+      ]
     },
     {
       "id": "57497373",
@@ -813,7 +1648,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#01a3f3",
-      "img": "assets/projects/57497373.webp"
+      "img": "assets/projects/57497373.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57497373/m338508279.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497373/m338508275.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57497373/m338511609.jpg"
+        }
+      ]
     },
     {
       "id": "57495867",
@@ -824,18 +1673,58 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#040404",
-      "img": "assets/projects/57495867.webp"
+      "img": "assets/projects/57495867.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57495867/m338499707.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57495867/m338499711.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57495867/m338507703.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57495867/m338499709.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57495867/m338508859.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57495867/m338508857.jpg"
+        }
+      ]
     },
     {
       "id": "57494915",
       "title": "Atton Hoteles Expansión",
       "full": "Atton Hoteles Expansión",
-      "url": "https://www.behance.net/gallery/57494915/Atton-Hoteles-Expasion",
+      "url": "https://www.behance.net/gallery/57494915/Atton-Hoteles-Expansion",
       "publishedOn": 1507310454,
       "year": 2017,
       "category": "Proyecto",
       "color": "#9f999b",
-      "img": "assets/projects/57494915.webp"
+      "img": "assets/projects/57494915.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57494915/m341629393.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57494915/m341629399.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57494915/m341629397.jpg"
+        }
+      ]
     },
     {
       "id": "57492677",
@@ -846,7 +1735,21 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#9dcee5",
-      "img": "assets/projects/57492677.webp"
+      "img": "assets/projects/57492677.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57492677/m338480665.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57492677/m338480663.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57492677/m338480661.jpg"
+        }
+      ]
     },
     {
       "id": "57485801",
@@ -857,7 +1760,17 @@ window.BEHANCE_DATA = {
       "year": 2017,
       "category": "Proyecto",
       "color": "#3a3d43",
-      "img": "assets/projects/57485801.webp"
+      "img": "assets/projects/57485801.webp",
+      "media": [
+        {
+          "type": "image",
+          "src": "assets/projects/57485801/m338442237.jpg"
+        },
+        {
+          "type": "image",
+          "src": "assets/projects/57485801/m338442239.jpg"
+        }
+      ]
     }
   ]
 };
