@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-17T14:28:54+00:00",
+  "generatedAt": "2026-11-17T17:17:27+00:00",
   "source": "https://www.behance.net/v3/graphql",
   "profile": {
     "username": "ewaldzv",
@@ -10,7 +10,7 @@ window.BEHANCE_DATA = {
     "email": "ewald2004@gmail.com",
     "url": "https://www.behance.net/ewaldzv",
     "stats": {
-      "views": 1518,
+      "views": 1519,
       "appreciations": 51,
       "followers": 19
     },
