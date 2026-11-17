@@ -334,6 +334,15 @@
   .clients{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:18px}
   .clients span{font-family:var(--serif);font-size:1.05rem;color:#d8d3ca;opacity:.85}
 
+  /* ---------- Premios ---------- */
+  .awards-list{max-width:760px;border-top:1px solid var(--line)}
+  .awards-list > div{
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;
+    padding:18px 0;border-bottom:1px solid var(--line);
+  }
+  .awards-list strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.1rem,2vw,1.5rem)}
+  .awards-list span{font-size:.85rem;color:var(--muted)}
+
   /* ---------- Contacto ---------- */
   .contact{position:relative;overflow:hidden}
   .contact::before{
@@ -690,10 +699,28 @@
     </div>
   </section>
 
+  <!-- PREMIOS -->
+  <section class="section" id="premios">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="section-num">03 — Premios</p>
+          <h2>Premios en <em>festivales publicitarios</em></h2>
+        </div>
+      </div>
+      <div class="awards-list reveal">
+        <div><strong>2 veces finalista</strong> <span>Festival Publicitario Cannes Lions</span></div>
+        <div><strong>17 premios</strong> <span>Festival Publicitario ACHAP</span></div>
+        <div><strong>2 premios</strong> <span>Festival Publicitario FIAP Argentina</span></div>
+        <div><strong>3 premios</strong> <span>Festival Ojo de Iberoamérica</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACTO -->
   <section class="section contact" id="contacto">
     <div class="wrap contact-inner">
-      <p class="eyebrow" style="justify-content:center">03 — Contacto</p>
+      <p class="eyebrow" style="justify-content:center">04 — Contacto</p>
       <h2>¿Trabajamos <em>juntos</em>?</h2>
       <p>
         ¿Tienes una campaña, una marca o una idea que necesita una mirada?
