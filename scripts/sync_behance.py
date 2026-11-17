@@ -130,7 +130,11 @@ def category_for(name: str) -> str:
 
 
 # Orden en que aparecen las categorías en el sitio (y en los filtros).
-CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"]
+CATEGORY_ORDER = ["Videos", "Campañas", "Inmobiliario", "Stand", "Proyecto"]
+
+# Proyecto que siempre aparece primero dentro de la categoría "Videos".
+# Corresponde a "Video Presentación BioGaia FAR".
+VIDEO_FEATURED_ID = "257690171"
 
 # Proyecto que siempre aparece primero en la grilla, sin importar la fecha.
 # Corresponde a "Campaña Aerochamber Laboratorios ABBOTT".
@@ -162,8 +166,8 @@ TITLE_FIXES = {
 }
 
 
-def sort_key(project: dict) -> tuple[int, int, int]:
-    """Primero el proyecto destacado, luego por categoría y por fecha descendente."""
+def sort_key(project: dict) -> tuple[int, int, int, int]:
+    """Destacado, categoría, destacado de videos y fecha descendente."""
     is_featured = 0 if str(project.get("id")) == FEATURED_ID else 1
     category = project.get("category", "Proyecto")
     rank = (
@@ -171,7 +175,12 @@ def sort_key(project: dict) -> tuple[int, int, int]:
         if category in CATEGORY_ORDER
         else len(CATEGORY_ORDER)
     )
-    return (is_featured, rank, -int(project.get("publishedOn") or 0))
+    is_video_featured = (
+        0
+        if category == "Videos" and str(project.get("id")) == VIDEO_FEATURED_ID
+        else 1
+    )
+    return (is_featured, rank, is_video_featured, -int(project.get("publishedOn") or 0))
 
 
 def color_hex(color: dict | None) -> str:

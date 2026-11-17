@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-17T13:43:47+00:00",
+  "generatedAt": "2026-11-17T14:28:54+00:00",
   "source": "https://www.behance.net/v3/graphql",
   "profile": {
     "username": "ewaldzv",
@@ -92,6 +92,60 @@ window.BEHANCE_DATA = {
         {
           "type": "image",
           "src": "assets/projects/257691301/m1505522461.jpg"
+        }
+      ]
+    },
+    {
+      "id": "257690171",
+      "title": "Video Presentación BioGaia FAR",
+      "full": "Video Presentación BioGaia FAR",
+      "url": "https://www.behance.net/gallery/257690171/Video-Presentacion-BioGaia-FAR",
+      "publishedOn": 1793126039,
+      "year": 2026,
+      "category": "Videos",
+      "color": "#372e2d",
+      "img": "assets/projects/257690171.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257690171/m1505511617.mp4",
+          "poster": "assets/projects/257690171/m1505511617-poster.jpg"
+        }
+      ]
+    },
+    {
+      "id": "257692997",
+      "title": "Video Promo Dirección de Arte Generativa",
+      "full": "Video Promo Dirección de Arte Generativa",
+      "url": "https://www.behance.net/gallery/257692997/Video-Promo-Direccion-de-Arte-Generativa",
+      "publishedOn": 1793129755,
+      "year": 2026,
+      "category": "Videos",
+      "color": "#0c0d11",
+      "img": "assets/projects/257692997.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257692997/m1505534869.mp4",
+          "poster": "assets/projects/257692997/m1505534869-poster.jpg"
+        }
+      ]
+    },
+    {
+      "id": "257690581",
+      "title": "Video Inmobiliaria",
+      "full": "Video Inmobiliaria",
+      "url": "https://www.behance.net/gallery/257690581/Video-Inmobiliaria",
+      "publishedOn": 1793126583,
+      "year": 2026,
+      "category": "Videos",
+      "color": "#a0581a",
+      "img": "assets/projects/257690581.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/257690581/m1505515323.mp4",
+          "poster": "assets/projects/257690581/m1505515323-poster.jpg"
         }
       ]
     },
@@ -773,60 +827,6 @@ window.BEHANCE_DATA = {
         {
           "type": "image",
           "src": "assets/projects/57491763/m338476047.jpg"
-        }
-      ]
-    },
-    {
-      "id": "257692997",
-      "title": "Video Promo Dirección de Arte Generativa",
-      "full": "Video Promo Dirección de Arte Generativa",
-      "url": "https://www.behance.net/gallery/257692997/Video-Promo-Direccion-de-Arte-Generativa",
-      "publishedOn": 1793129755,
-      "year": 2026,
-      "category": "Videos",
-      "color": "#0c0d11",
-      "img": "assets/projects/257692997.webp",
-      "media": [
-        {
-          "type": "video",
-          "src": "assets/projects/257692997/m1505534869.mp4",
-          "poster": "assets/projects/257692997/m1505534869-poster.jpg"
-        }
-      ]
-    },
-    {
-      "id": "257690581",
-      "title": "Video Inmobiliaria",
-      "full": "Video Inmobiliaria",
-      "url": "https://www.behance.net/gallery/257690581/Video-Inmobiliaria",
-      "publishedOn": 1793126583,
-      "year": 2026,
-      "category": "Videos",
-      "color": "#a0581a",
-      "img": "assets/projects/257690581.webp",
-      "media": [
-        {
-          "type": "video",
-          "src": "assets/projects/257690581/m1505515323.mp4",
-          "poster": "assets/projects/257690581/m1505515323-poster.jpg"
-        }
-      ]
-    },
-    {
-      "id": "257690171",
-      "title": "Video Presentación BioGaia FAR",
-      "full": "Video Presentación BioGaia FAR",
-      "url": "https://www.behance.net/gallery/257690171/Video-Presentacion-BioGaia-FAR",
-      "publishedOn": 1793126039,
-      "year": 2026,
-      "category": "Videos",
-      "color": "#372e2d",
-      "img": "assets/projects/257690171.webp",
-      "media": [
-        {
-          "type": "video",
-          "src": "assets/projects/257690171/m1505511617.mp4",
-          "poster": "assets/projects/257690171/m1505511617-poster.jpg"
         }
       ]
     },
