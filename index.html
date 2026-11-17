@@ -810,17 +810,18 @@
   }
 
   /* Filtros */
-  const CATEGORY_ORDER = ["Campañas", "Videos", "Inmobiliario", "Stand", "Proyecto"];
+  const CATEGORY_ORDER = ["Videos", "Campañas", "Inmobiliario", "Stand", "Proyecto"];
   const present = [...new Set(projects.map((p) => p.category))];
   const ordered = present.sort((a, b) => {
     const ia = CATEGORY_ORDER.indexOf(a);
     const ib = CATEGORY_ORDER.indexOf(b);
     return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
   });
-  const categories = ["Todos", ...ordered];
-  filters.innerHTML = categories.map((cat, i) => {
+  const categories = [...ordered, "Todos"];
+  filters.innerHTML = categories.map((cat) => {
     const count = cat === "Todos" ? projects.length : projects.filter((p) => p.category === cat).length;
-    return `<button class="filter${i === 0 ? " is-active" : ""}" data-filter="${cat}" aria-pressed="${i === 0}">${cat} <sup aria-hidden="true">${count}</sup></button>`;
+    const active = cat === "Todos";
+    return `<button class="filter${active ? " is-active" : ""}" data-filter="${cat}" aria-pressed="${active}">${cat} <sup aria-hidden="true">${count}</sup></button>`;
   }).join("");
 
   filters.addEventListener("click", (e) => {
