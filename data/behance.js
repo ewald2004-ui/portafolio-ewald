@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-17T17:17:27+00:00",
+  "generatedAt": "2026-11-18T16:52:11+00:00",
   "source": "https://www.behance.net/v3/graphql",
   "profile": {
     "username": "ewaldzv",
@@ -319,11 +319,13 @@ window.BEHANCE_DATA = {
       "media": [
         {
           "type": "video",
-          "src": "assets/projects/257691027/m1505518861.mp4"
+          "src": "assets/projects/257691027/m1505518861.mp4",
+          "poster": "assets/projects/257691027/m1505518861-poster.jpg"
         },
         {
           "type": "video",
-          "src": "assets/projects/257691027/m1505518865.mp4"
+          "src": "assets/projects/257691027/m1505518865.mp4",
+          "poster": "assets/projects/257691027/m1505518865-poster.jpg"
         },
         {
           "type": "video",
