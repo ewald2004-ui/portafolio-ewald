@@ -1,6 +1,6 @@
 /* Archivo generado por scripts/sync_behance.py. No editar a mano. */
 window.BEHANCE_DATA = {
-  "generatedAt": "2026-11-18T16:52:11+00:00",
+  "generatedAt": "2026-11-20T16:34:34+00:00",
   "source": "https://www.behance.net/v3/graphql",
   "profile": {
     "username": "ewaldzv",
@@ -110,6 +110,23 @@ window.BEHANCE_DATA = {
           "type": "video",
           "src": "assets/projects/257690171/m1505511617.mp4",
           "poster": "assets/projects/257690171/m1505511617-poster.jpg"
+        }
+      ]
+    },
+    {
+      "id": "258750569",
+      "title": "Video Proyecto Personal IA",
+      "full": "Video Proyecto Personal IA",
+      "url": "https://www.behance.net/gallery/258750569/Video-Proyecto-Personal-IA",
+      "publishedOn": 1795116066,
+      "year": 2026,
+      "category": "Videos",
+      "color": "#d99b4c",
+      "img": "assets/projects/258750569.webp",
+      "media": [
+        {
+          "type": "video",
+          "src": "assets/projects/258750569/m1514227741.mp4"
         }
       ]
     },
